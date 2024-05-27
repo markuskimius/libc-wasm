@@ -12,7 +12,17 @@ A small subset of the C library to build a vanilla WASM program.
 Requires clang17 or later, wasm-ld, and wasm-ar.
 
 ```bash
-$ make PREFIX=/opt/wasm install
+$ sudo mkdir -p /opt/wasm
+$ sudo make PREFIX=/opt/wasm install
+```
+
+
+## Building with libc-wasm
+
+To build a binary with libc-wasm:
+
+```bash
+$ clang myprogram.c -L/opt/wasm/lib -lc-wasm
 ```
 
 
