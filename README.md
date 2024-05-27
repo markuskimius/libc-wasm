@@ -3,27 +3,29 @@
 [![Release](https://img.shields.io/github/v/release/markuskimius/libc-wasm?include_prereleases&label=Pre-release)](https://github.com/markuskimius/libc-wasm/releases)
 [![Wasm](https://img.shields.io/badge/wasm-blue.svg)](wasm)
 
-A C library subset for WASM
+C library subset for WASM
 
 
 ## Overview
 
+A small subset of C library to build a vanilla WASM program.
 
 
 ## Supported Types
 
-* int8\_t;
-* int16\_t;
-* int32\_t;
-* int64\_t;
-* uint8\_t;
-* uint16\_t;
-* uint32\_t;
-* uint64\_t;
-* ssize\_t;
-* size\_t;
-* intmax\_t;
-* uintmax\_t;
+* FILE
+* int16\_t
+* int32\_t
+* int64\_t
+* int8\_t
+* intmax\_t
+* size\_t
+* ssize\_t
+* uint16\_t
+* uint32\_t
+* uint64\_t
+* uint8\_t
+* uintmax\_t
 
 
 ## Supported Globals
