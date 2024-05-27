@@ -22,7 +22,8 @@ $ sudo make PREFIX=/opt/wasm install
 To build a binary with libc-wasm:
 
 ```bash
-$ clang --target=wasm32 -nostdlib -Wno-incompatible-library-redeclaration -Wl,--no-entry -I/opt/wasm/include -L/opt/wasm/lib -lc-wasm -o myprogram.wasm myprogram.c
+$ clang --target=wasm32 -Wno-incompatible-library-redeclaration -I/opt/wasm/include -nostdlib -c -o myprogram.o myprogram.c
+$ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprogram.wasm
 ```
 
 
