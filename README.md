@@ -91,23 +91,23 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 
 Flags:
 
-* #
-* 0
-* -
-* ' '
-* +
+* `#`
+* `0`
+* `-`
+* ` `
+* `+`
 
 Field widths:
 
-* l
-* ll
-* z
+* `l`
+* `ll`
+* `z`
 
 Conversion specifiers:
 
-* d, i
-* o, u, x, X
-* p
+* `d`, `i`
+* `o`, `u`, `x`, `X`
+* `p`
 
 
 ## License
