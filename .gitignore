@@ -1,0 +1,11 @@
+*.a
+*.o
+*.output
+*.tab.c
+*.tab.h
+*.wasm
+*.yy.c
+*.swp
+*.swo
+include
+lib
