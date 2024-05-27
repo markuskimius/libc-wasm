@@ -4,12 +4,7 @@
 ![clang17](https://img.shields.io/badge/clang-17-blue.svg)
 ![wasm](https://img.shields.io/badge/wasm-blue.svg)
 
-C library subset for WASM
-
-
-## Overview
-
-A small subset of C library to build a vanilla WASM program.
+A small subset of the C library to build a vanilla WASM program.
 
 
 ## Installation
