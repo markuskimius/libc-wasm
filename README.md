@@ -1,7 +1,8 @@
 # libc-wasm
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/markuskimius/libc-wasm?include_prereleases&label=Pre-release)](https://github.com/markuskimius/libc-wasm/releases)
-[![Wasm](https://img.shields.io/badge/wasm-blue.svg)](wasm)
+[![clang17](https://img.shields.io/badge/clang-17-blue.svg)]
+[![wasm](https://img.shields.io/badge/wasm-blue.svg)]
 
 C library subset for WASM
 
@@ -9,6 +10,15 @@ C library subset for WASM
 ## Overview
 
 A small subset of C library to build a vanilla WASM program.
+
+
+## Compiling
+
+Requires clang17 or later, wasm-ld, and wasm-ar.
+
+```bash
+$ make PREFIX=/opt/wasm install
+```
 
 
 ## Supported Types
