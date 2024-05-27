@@ -87,6 +87,29 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 * write
 
 
+## Supported Printf Formatters
+
+Flags:
+
+* #
+* 0
+* -
+* ' '
+* +
+
+Field widths:
+
+* l
+* ll
+* z
+
+Conversion specifiers:
+
+* d, i
+* o, u, x, X
+* p
+
+
 ## License
 
 [Apache 2.0](LICENSE)
