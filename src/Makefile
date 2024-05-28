@@ -18,13 +18,15 @@ install: $(ARCHIVE)
 	install -m 755 -d $(PREFIX)/lib
 	install -m 755 -d $(PREFIX)/include
 	install -m 644 $(ARCHIVE) $(PREFIX)/lib
-	@for i in *.h; do                         \
-		install -m 644 $$i $(PREFIX)/include; \
+	@for i in *.h; do                              \
+		echo install -m 644 $$i $(PREFIX)/include; \
+		install -m 644 $$i $(PREFIX)/include;      \
 	done
 
 uninstall:
 	$(RM) $(PREFIX)/lib/$(ARCHIVE)
 	@for i in *.h; do                         \
+		echo $(RM) $(PREFIX)/include/$$i;     \
 		$(RM) $(PREFIX)/include/$$i;          \
 	done
 	rmdir $(PREFIX)/include

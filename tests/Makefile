@@ -5,12 +5,14 @@ TARGETS=c wasm
 
 all:
 	@for i in $(TARGETS); do \
+		echo make -C $$i;    \
 		make -C $$i;         \
 	done
 
 clean:
-	@for i in $(TARGETS); do \
-		make -C $$i clean;   \
+	@for i in $(TARGETS); do    \
+		echo make -C $$i clean; \
+		make -C $$i clean;      \
 	done
 
 
