@@ -71,6 +71,8 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 * fwrite
 * getc
 * isatty
+* isdigit
+* isspace
 * malloc
 * memcpy
 * memset
