@@ -1,4 +1,4 @@
-TARGET=main.wasm
+BINARIES=atoi.wasm cat.wasm sizeof.wasm
 PREFIX=../..
 CC=clang
 LD=wasm-ld
@@ -12,19 +12,27 @@ LDLIBS=-lc-wasm
 
 .PHONY: all clean
 
-all: $(TARGET)
+all: $(BINARIES)
 
 clean:
-	$(RM) $(TARGET) *.o
+	$(RM) $(BINARIES) *.o
 
 
 ##############################################################################
-# MAIN
+# RULES
 
-main.wasm: main.o
+%.wasm: %.o
 	$(LD) $(LDFLAGS) $(TARGET_ARCH) $< $(LDLIBS) -o $@ && chmod a-x $@
 
-main.o: main.c
+
+##############################################################################
+# SOURCES
+
+atoi.o: atoi.c
+
+cat.o: cat.c
+
+sizeof.o: sizeof.c
 
 
 # vim:noet:

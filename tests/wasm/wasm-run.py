@@ -82,10 +82,11 @@ def main():
         sys.stderr.write("Type `{SCRIPTNAME} --help` for help.\n".format(**globals()))
         sys.exit(1)
 
-    doMyThing()
+    for file in opts.files:
+        doMyThing(file)
 
 
-def doMyThing():
+def doMyThing(file):
     store = Store()
     memory8 = None
 
@@ -99,7 +100,7 @@ def doMyThing():
     def write(fd:"i32", buf:"i32", count:"i32") -> "i32":
         return os.write(fd, bytearray(memory8[buf:buf+count]))
 
-    with open("main.wasm", mode="rb") as fd:
+    with open(file, mode="rb") as fd:
         wasm = fd.read()
         module = Module(store, wasm)
         instance = Instance(module, {

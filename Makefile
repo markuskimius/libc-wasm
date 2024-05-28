@@ -2,11 +2,11 @@
 
 all:
 	make -C src all install
-	make -C test all
+	make -C tests all
 
 clean:
 	make -C src clean
-	make -C test clean
+	make -C tests clean
 
 install:
 	make -C src install

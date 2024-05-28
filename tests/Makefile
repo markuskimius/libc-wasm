@@ -1,4 +1,4 @@
-TARGETS=01-cat
+TARGETS=c wasm
 
 
 .PHONY: all clean install
