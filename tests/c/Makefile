@@ -1,4 +1,4 @@
-BINARIES=atoi cat sizeof
+BINARIES=atoi sizeof limits cat
 
 
 ##############################################################################
@@ -24,9 +24,11 @@ clean:
 
 atoi.o: ../wasm/atoi.c
 
-cat.o: ../wasm/cat.c
-
 sizeof.o: ../wasm/sizeof.c
+
+limits.o: ../wasm/limits.c
+
+cat.o: ../wasm/cat.c
 
 
 # vim:noet:

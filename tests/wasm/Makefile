@@ -1,4 +1,4 @@
-BINARIES=atoi.wasm cat.wasm sizeof.wasm
+BINARIES=atoi.wasm sizeof.wasm limits.wasm cat.wasm
 PREFIX=../..
 CC=clang
 LD=wasm-ld
@@ -30,9 +30,11 @@ clean:
 
 atoi.o: atoi.c
 
-cat.o: cat.c
-
 sizeof.o: sizeof.c
+
+limits.o: limits.c
+
+cat.o: cat.c
 
 
 # vim:noet:
