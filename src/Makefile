@@ -36,14 +36,14 @@ uninstall:
 ##############################################################################
 # ARCHIVE
 
-libc-wasm.a: stdio.o stdlib.o string.o unistd.o errno.o ctype.o
+libc-wasm.a: stdio.o stdlib.o string.o unistd.o errno.o ctype.o math.o
 	llvm-ar rcs $@ $^
 
 
 ##############################################################################
 # LIBRARY
 
-stdio.o: stdio.c stdio.h unistd.h string.h errno.h
+stdio.o: stdio.c stdio.h stdlib.h unistd.h string.h errno.h math.h
 
 stdlib.o: stdlib.c stdlib.h assert.h ctype.h
 
@@ -54,6 +54,8 @@ unistd.o: unistd.c unistd.h
 errno.o: errno.c errno.h
 
 ctype.o: ctype.c ctype.h
+
+math.o: math.c math.h inttypes.h
 
 assert.h: stdio.h
 

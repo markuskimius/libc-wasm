@@ -1,7 +1,9 @@
 #include "stdio.h"
+#include "stdlib.h"
 #include "unistd.h"
 #include "string.h"
 #include "errno.h"
+#include "math.h"
 
 
 /* ***************************************************************************
@@ -16,6 +18,7 @@ typedef struct _FORMAT {
     int ucase;
     int base;
     int width;
+    int dwidth;
     int length;
 } _FORMAT;
 
@@ -48,7 +51,11 @@ FILE* stderr = &_streams[2];
 * @returns   Pointer to the conversion specifier just after the modifiers.
 */
 static const char* _fparse(const char* cp, _FORMAT* fmt) {
+    int dot = 0;
+
     memset(fmt, 0, sizeof(*fmt));
+    fmt->base = 10;
+    fmt->dwidth = 6;
 
     while(*cp) {
         int32_t handled = 1;
@@ -58,16 +65,17 @@ static const char* _fparse(const char* cp, _FORMAT* fmt) {
             case '-': fmt->lalign = 1; break;
             case '+': fmt->sign = '+'; break;
             case ' ': fmt->sign = ' '; break;
-            case '0': if(fmt->width) fmt->width *= 10; else fmt->zeropad = 1; break;
-            case '1': fmt->width = fmt->width * 10 + 1; break;
-            case '2': fmt->width = fmt->width * 10 + 2; break;
-            case '3': fmt->width = fmt->width * 10 + 3; break;
-            case '4': fmt->width = fmt->width * 10 + 4; break;
-            case '5': fmt->width = fmt->width * 10 + 5; break;
-            case '6': fmt->width = fmt->width * 10 + 6; break;
-            case '7': fmt->width = fmt->width * 10 + 7; break;
-            case '8': fmt->width = fmt->width * 10 + 8; break;
-            case '9': fmt->width = fmt->width * 10 + 9; break;
+            case '.': dot = 1; fmt->dwidth = 0; break;
+            case '0': if(dot) fmt->dwidth *= 10; else if(fmt->width) fmt->width *= 10; else fmt->zeropad = 1; break;
+            case '1': if(dot) fmt->dwidth = fmt->dwidth * 10 + 1; else fmt->width = fmt->width * 10 + 1; break;
+            case '2': if(dot) fmt->dwidth = fmt->dwidth * 10 + 2; else fmt->width = fmt->width * 10 + 2; break;
+            case '3': if(dot) fmt->dwidth = fmt->dwidth * 10 + 3; else fmt->width = fmt->width * 10 + 3; break;
+            case '4': if(dot) fmt->dwidth = fmt->dwidth * 10 + 4; else fmt->width = fmt->width * 10 + 4; break;
+            case '5': if(dot) fmt->dwidth = fmt->dwidth * 10 + 5; else fmt->width = fmt->width * 10 + 5; break;
+            case '6': if(dot) fmt->dwidth = fmt->dwidth * 10 + 6; else fmt->width = fmt->width * 10 + 6; break;
+            case '7': if(dot) fmt->dwidth = fmt->dwidth * 10 + 7; else fmt->width = fmt->width * 10 + 7; break;
+            case '8': if(dot) fmt->dwidth = fmt->dwidth * 10 + 8; else fmt->width = fmt->width * 10 + 8; break;
+            case '9': if(dot) fmt->dwidth = fmt->dwidth * 10 + 9; else fmt->width = fmt->width * 10 + 9; break;
             case 'l': fmt->length = (fmt->length == sizeof(long)) ? sizeof(long long) : sizeof(long); break;
             case 'z': fmt->length = sizeof(size_t); break;
             default : handled = 0; break;
@@ -185,17 +193,9 @@ static size_t _sprintu(char* dest, _FORMAT* fmt, unsigned long long value) {
     return nchar;
 }
 
-static size_t _svprinti(char* dest, _FORMAT* fmt, va_list ap) {
-    intmax_t value = 0;
+static size_t _sprinti(char* dest, _FORMAT* fmt, intmax_t value) {
     size_t zloc = 0;
     size_t nchar = 0;
-
-    /* Get value */
-    switch(fmt->length) {
-        case sizeof(long long): value = va_arg(ap, long long); break;
-        case sizeof(long)     : value = va_arg(ap, long); break;
-        default               : value = va_arg(ap, int); break;
-    }
 
     /* Strip high bits for numbers < sizeof(intmax_t) */
     if(fmt->sign == 'u' && fmt->length < sizeof(intmax_t)) {
@@ -238,6 +238,71 @@ static size_t _svprinti(char* dest, _FORMAT* fmt, va_list ap) {
 
     /* Number part */
     nchar += _sprintu(&dest[nchar], fmt, value);
+
+    /* Terminator */
+    dest[nchar] = '\0';
+
+    return zloc;
+}
+
+static size_t _sprintf(char* dest, _FORMAT* fmt, double value) {
+    size_t zloc = 0;
+    size_t nchar = 0;
+
+    /* - for a negative number (-0.0 needs special handling) */
+    if(value < 0.0 || (value == 0.0 && *(uint64_t*)&value)) {
+        dest[nchar++] = '-';
+        value = -value;
+    }
+    /* + or space in place of sign, if requested, and for a non-NaN */
+    else if(fmt->sign && !isnan(value)) {
+        dest[nchar++] = fmt->sign;
+    }
+
+    /*
+    * This is where we would want to add zero padding but a large padding can
+    * cause dest to overflow so we defer the padding responsibility to the
+    * caller.
+    */
+    zloc = nchar;
+
+    /* Special values */
+    if(isnan(value)) {
+        dest[nchar++] = 'n';
+        dest[nchar++] = 'a';
+        dest[nchar++] = 'n';
+    }
+    else if(isinf(value)) {
+        dest[nchar++] = 'i';
+        dest[nchar++] = 'n';
+        dest[nchar++] = 'f';
+    }
+    else {
+        double round = 0.5;
+
+        /* Round */
+        for(int i=0; i<fmt->dwidth; i++) round /= 10.0;
+        value += round;
+
+        /* Whole part */
+        nchar += _sprintu(&dest[nchar], fmt, value);
+
+        /* Decimal part */
+        if(fmt->dwidth > 0) {
+            int64_t whole = value;
+            double frac = value - whole;
+
+            /* assert(frac <= 0); */
+            dest[nchar++] = '.';
+
+            for(int i=0; i<fmt->dwidth; i++) {
+                whole = frac * 10.0;
+                frac = frac * 10.0 - whole;
+
+                dest[nchar++] = whole + '0';
+            }
+        }
+    }
 
     /* Terminator */
     dest[nchar] = '\0';
@@ -377,6 +442,10 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
         char* bp = buf;
         ssize_t len = 0;
         int32_t zloc = 0;
+        char* svalue = NULL;
+        intmax_t ivalue = 0;
+        double fvalue = 0;
+        int cvalue = 0;
 
         /* Plain character */
         if(*cp != '%') {
@@ -387,18 +456,34 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
         /* Save the modifier(s) into stream->fmt, increment cp */
         cp = _fparse(cp+1, &fmt);
 
-        /* Conversion specifier pass 1 */
+        /* Get value */
         switch(*cp) {
-            case '%': _sprintc(bp, &fmt, '%'); break;
-            case 'c': _sprintc(bp, &fmt, va_arg(ap, int)); break;
-            case 's': bp = va_arg(ap, char*); break; /* Point to the input */
-            case 'i': /* same as 'd' */
-            case 'd': fmt.base = 10;                                  zloc = _svprinti(bp, &fmt, ap); break;
-            case 'o': fmt.base = 8 ; fmt.sign = 'u';                  zloc = _svprinti(bp, &fmt, ap); break;
-            case 'u': fmt.base = 10; fmt.sign = 'u';                  zloc = _svprinti(bp, &fmt, ap); break;
-            case 'x': fmt.base = 16; fmt.sign = 'u';                  zloc = _svprinti(bp, &fmt, ap); break;
-            case 'X': fmt.base = 16; fmt.sign = 'u'; fmt.ucase = 1;   zloc = _svprinti(bp, &fmt, ap); break;
-            case 'p': fmt.base = 16; fmt.sign = 'u'; fmt.altform = 1; zloc = _svprinti(bp, &fmt, ap); break;
+            case '%': cvalue = '%';                break;
+            case 'c': cvalue = va_arg(ap, int);    break;
+            case 's': svalue = va_arg(ap, char*);  break;
+            case 'f': fvalue = va_arg(ap, double); break;
+            case 'i': case 'd': case 'o': case 'u': case 'x': case 'X': case 'p':
+                switch(fmt.length) {
+                    case sizeof(long long): ivalue = va_arg(ap, long long); break;
+                    case sizeof(long)     : ivalue = va_arg(ap, long); break;
+                    default               : ivalue = va_arg(ap, int); break;
+                }
+                break;
+        }
+
+        /* Print the value */
+        switch(*cp) {
+            case '%': _sprintc(bp, &fmt, cvalue); break;
+            case 'c': _sprintc(bp, &fmt, cvalue); break;
+            case 's': bp = svalue;                break; /* Point to the input */
+            case 'f':                                                 zloc = _sprintf(bp, &fmt, fvalue); break;
+            case 'i': fmt.base = 10;                                  zloc = _sprinti(bp, &fmt, ivalue); break;
+            case 'd': fmt.base = 10;                                  zloc = _sprinti(bp, &fmt, ivalue); break;
+            case 'o': fmt.base = 8 ; fmt.sign = 'u';                  zloc = _sprinti(bp, &fmt, ivalue); break;
+            case 'u': fmt.base = 10; fmt.sign = 'u';                  zloc = _sprinti(bp, &fmt, ivalue); break;
+            case 'x': fmt.base = 16; fmt.sign = 'u';                  zloc = _sprinti(bp, &fmt, ivalue); break;
+            case 'X': fmt.base = 16; fmt.sign = 'u'; fmt.ucase = 1;   zloc = _sprinti(bp, &fmt, ivalue); break;
+            case 'p': fmt.base = 16; fmt.sign = 'u'; fmt.altform = 1; zloc = _sprinti(bp, &fmt, ivalue); break;
             default : return -1;
         }
         len = strlen(bp);

@@ -73,6 +73,9 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 * isatty
 * isdigit
 * isspace
+* isxdigit
+* isnan
+* isinf
 * malloc
 * memcpy
 * memset
@@ -83,6 +86,12 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 * sbrk
 * snprintf
 * strlen
+* strcmp
+* strncmp
+* strcasecmp
+* strncasecmp
+* toupper
+* tolower
 * vfprintf
 * vprintf
 * vsnprintf
@@ -110,6 +119,7 @@ Conversion specifiers:
 * `d`, `i`
 * `o`, `u`, `x`, `X`
 * `p`
+* `f`
 
 
 ## License

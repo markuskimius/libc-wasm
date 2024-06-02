@@ -1,5 +1,6 @@
 #include "string.h"
 #include "stdlib.h"
+#include "ctype.h"
 
 void* memcpy(void* dest, const void* src, size_t n) {
     int8_t* dp = dest;
@@ -32,3 +33,54 @@ size_t strlen(const char* s) {
 
     return i;
 }
+
+int strcmp(const char* s1, const char* s2) {
+    int cmp = 0;
+
+    while(cmp==0 && (*s1 || *s2)) {
+        cmp = *s1 - *s2;
+        s1++;
+        s2++;
+    }
+
+    return cmp;
+}
+
+int strncmp(const char* s1, const char* s2, size_t n) {
+    int cmp = 0;
+
+    while(cmp==0 && n && (*s1 || *s2)) {
+        cmp = *s1 - *s2;
+        s1++;
+        s2++;
+        n--;
+    }
+
+    return cmp;
+}
+
+int strcasecmp(const char* s1, const char* s2) {
+    int cmp = 0;
+
+    while(cmp==0 && (*s1 || *s2)) {
+        cmp = tolower(*s1) - tolower(*s2);
+        s1++;
+        s2++;
+    }
+
+    return cmp;
+}
+
+int strncasecmp(const char* s1, const char* s2, size_t n) {
+    int cmp = 0;
+
+    while(cmp==0 && n && (*s1 || *s2)) {
+        cmp = tolower(*s1) - tolower(*s2);
+        s1++;
+        s2++;
+        n--;
+    }
+
+    return cmp;
+}
+
