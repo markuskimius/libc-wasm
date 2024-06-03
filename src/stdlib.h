@@ -10,7 +10,6 @@ extern "C" {
 
 #define NULL ((void*) 0)
 
-void exit(int status);
 void* sbrk(size_t incr);
 void free(void* ptr);
 void* malloc(size_t size);

@@ -77,7 +77,6 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 * atof
 * atoi
 * clearerr
-* exit
 * feof
 * ferror
 * fflush

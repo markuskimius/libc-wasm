@@ -209,11 +209,6 @@ void* realloc(void* ptr, size_t size) {
     return malloc(size);
 }
 
-void exit(int status) {
-// TODO
-    __builtin_unreachable();
-}
-
 double atof(const char* nptr) {
     const char* cp = nptr;
     double value = 0.0;
