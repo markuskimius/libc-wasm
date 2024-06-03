@@ -271,11 +271,13 @@ static size_t _sprintf(char* dest, _FORMAT* fmt, double value) {
         dest[nchar++] = 'n';
         dest[nchar++] = 'a';
         dest[nchar++] = 'n';
+        fmt->zeropad = 0;
     }
     else if(isinf(value)) {
         dest[nchar++] = 'i';
         dest[nchar++] = 'n';
         dest[nchar++] = 'f';
+        fmt->zeropad = 0;
     }
     else {
         double round = 0.5;
