@@ -177,8 +177,8 @@ static void _sprintc(char* dest, _FORMAT* fmt, char c) {
     dest[1] = '\0';
 }
 
-static size_t _sprintu(char* dest, _FORMAT* fmt, unsigned long long value) {
-    unsigned long long div = value / fmt->base;
+static size_t _sprintu(char* dest, _FORMAT* fmt, uintmax_t value) {
+    uintmax_t div = value / fmt->base;
     int rem = value % fmt->base;
     size_t nchar = 0;
 
@@ -470,6 +470,8 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
                 }
                 break;
         }
+
+        /* FIXME: Handle large fmt.dwidth */
 
         /* Print the value */
         switch(*cp) {
