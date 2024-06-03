@@ -1,6 +1,7 @@
 #include "stdlib.h"
 #include "assert.h"
 #include "ctype.h"
+#include "string.h"
 
 
 /* ***************************************************************************
@@ -19,6 +20,9 @@ typedef struct _MBINFO {
 /* ***************************************************************************
 * MACROS
 */
+
+#define _NAN             (0.0 / 0.0)
+#define _INF             (1.0 / 0.0)
 
 #define _WORD_T          int32_t
 #define _WORD_SIZE       (sizeof(_WORD_T))
@@ -211,8 +215,109 @@ void exit(int status) {
 }
 
 double atof(const char* nptr) {
-// TODO
-    return 0;
+    const char* cp = nptr;
+    double value = 0.0;
+    int base = 10;
+    int neg = 0;
+
+    /* Skip Whitespaces */
+    while(isspace(*cp)) cp++;
+
+    /* NaN */
+    if(strncasecmp(cp, "nan", 3) == 0) {
+        return _NAN;
+    }
+
+    /* Sign */
+    if(*cp == '+' || *cp == '-') {
+        if(*cp == '-') neg = 1;
+        cp++;
+    }
+
+    /* Infinity */
+    if(strncasecmp(cp, "inf", 3) == 0) {
+        return neg ? -_INF : _INF;
+    }
+
+    /* Hexadecimal? */
+    if(strncasecmp(cp, "0x", 2) == 0) {
+        base = 16;
+        cp += 2;
+    }
+
+    /* Invalid number? */
+    if(base == 10 && !isdigit(*cp)) return 0.0;
+    if(base == 16 && !isxdigit(*cp)) return 0.0;
+
+    /* Whole number */
+    while(1) {
+        if(isdigit(*cp)) {
+            value *= base;
+            value += (*cp - '0');
+            cp++;
+        }
+        else if(base == 16 && isxdigit(*cp)) {
+            value *= base;
+            value += (tolower(*cp) - 'a' + 10);
+            cp++;
+        }
+        else break;
+    }
+
+    /* Fractional */
+    if(*cp == '.') {
+        double divisor = 1.0;
+
+        cp++;
+
+        /* Number */
+        while(1) {
+            if(isdigit(*cp)) {
+                divisor *= base;
+                value *= base;
+                value += (*cp - '0');
+                cp++;
+            }
+            else if(base == 16 && isxdigit(*cp)) {
+                divisor *= base;
+                value *= base;
+                value += (tolower(*cp) - 'a' + 10);
+                cp++;
+            }
+            else break;
+        }
+
+        value /= divisor;
+    }
+
+    /* Exponent */
+    if((base==10 && tolower(*cp)=='e') || (base==16 && tolower(*cp)=='p')) {
+        const double exp10[] = { 1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8, 1e9, 1e10 };
+        const double exp2[] = { 0x1p0, 0x1p1, 0x1p2, 0x1p3, 0x1p4, 0x1p5, 0x1p6, 0x1p7, 0x1p8, 0x1p9, 0x1p10 };
+        const double* exp = (base==10) ? exp10 : exp2;
+        double factor = 1.0;
+        int eneg = 0;
+
+        /* Skip 'e' or 'p' */
+        cp++;
+
+        /* Sign */
+        if(*cp == '+' || *cp == '-') {
+            if(*cp == '-') eneg = 1;
+            cp++;
+        }
+
+        /* Number */
+        while(isdigit(*cp)) {
+            if(eneg) value /= exp[*cp-'0'] * factor;
+            else value *= exp[*cp-'0'] * factor;
+
+            factor *= exp[10];
+            cp++;
+        }
+    }
+
+    return neg ? -value : value;
 }
 
 int atoi(const char* nptr) {
