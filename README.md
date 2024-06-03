@@ -52,9 +52,29 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 * stdout
 * stderr
 
+* CHAR\_MAX
+* CHAR\_MIN
+* INT\_MAX
+* INT\_MIN
+* LLONG\_MAX
+* LLONG\_MIN
+* LONG\_MAX
+* LONG\_MIN
+* NULL
+* SHRT\_MAX
+* SHRT\_MIN
+* UCHAR\_MAX
+* UINT\_MAX
+* ULLONG\_MAX
+* ULONG\_MAX
+* USHRT\_MAX
+
+... plus various error constants.
+
 
 ## Supported Functions/Macros
 
+* assert
 * atof
 * atoi
 * clearerr
@@ -72,30 +92,28 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 * getc
 * isatty
 * isdigit
+* isinf
+* isnan
 * isspace
 * isxdigit
-* isnan
-* isinf
 * malloc
 * memcpy
 * memset
 * printf
 * putc
-* read
 * realloc
 * sbrk
 * snprintf
-* strlen
-* strcmp
-* strncmp
 * strcasecmp
+* strcmp
+* strlen
 * strncasecmp
-* toupper
+* strncmp
 * tolower
+* toupper
 * vfprintf
 * vprintf
 * vsnprintf
-* write
 
 
 ## Supported Printf Formatters
@@ -116,10 +134,12 @@ Field widths:
 
 Conversion specifiers:
 
+* `c`
+* `s`
+* `f`
 * `d`, `i`
 * `o`, `u`, `x`, `X`
 * `p`
-* `f`
 
 
 ## License
