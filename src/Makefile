@@ -43,21 +43,22 @@ libc-wasm.a: stdio.o stdlib.o string.o unistd.o errno.o ctype.o math.o
 ##############################################################################
 # LIBRARY
 
-stdio.o: stdio.c stdio.h stdlib.h unistd.h string.h errno.h math.h
-
-stdlib.o: stdlib.c stdlib.h assert.h ctype.h
-
-string.o: string.c string.h stdlib.h
-
-unistd.o: unistd.c unistd.h
+ctype.o: ctype.c ctype.h
 
 errno.o: errno.c errno.h
 
-ctype.o: ctype.c ctype.h
-
 math.o: math.c math.h inttypes.h
 
+stdio.o: stdio.c stdio.h errno.h math.h stdlib.h string.h unistd.h
+
+stdlib.o: stdlib.c stdlib.h assert.h ctype.h string.h
+
+string.o: string.c string.h ctype.h stdlib.h
+
+unistd.o: unistd.c unistd.h
+
 assert.h: stdio.h
+	touch $@
 
 stdio.h: inttypes.h
 	touch $@

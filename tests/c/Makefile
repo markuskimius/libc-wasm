@@ -1,4 +1,10 @@
-BINARIES=printf atoi atof ctype sizeof limits string cat test
+BINARIES=atof atoi cat ctype limits printf sizeof string test
+# PREFIX=
+# CC=
+# LD=
+# CPPFLAGS=
+# LDFLAGS=
+# LDLIBS=
 
 
 ##############################################################################
@@ -22,21 +28,21 @@ clean:
 ##############################################################################
 # SOURCES
 
-printf.o: ../wasm/printf.c
+atof.o: ../wasm/atof.c
 
 atoi.o: ../wasm/atoi.c
 
-atof.o: ../wasm/atof.c
+cat.o: ../wasm/cat.c
 
 ctype.o: ../wasm/ctype.c
 
-sizeof.o: ../wasm/sizeof.c
-
 limits.o: ../wasm/limits.c
 
-string.o: ../wasm/string.c
+printf.o: ../wasm/printf.c
 
-cat.o: ../wasm/cat.c
+sizeof.o: ../wasm/sizeof.c
+
+string.o: ../wasm/string.c
 
 test.o: ../wasm/test.c
 

@@ -1,5 +1,5 @@
-#include "inttypes.h"
 #include "math.h"
+#include "inttypes.h"
 
 static const double _nan = 0.0 / 0.0;
 static const double _inf = 1.0 / 0.0;

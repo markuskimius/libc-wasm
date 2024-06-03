@@ -1,4 +1,4 @@
-BINARIES=printf.wasm atoi.wasm atof.wasm ctype.wasm sizeof.wasm limits.wasm string.wasm cat.wasm test.wasm
+BINARIES=atof.wasm atoi.wasm cat.wasm ctype.wasm limits.wasm printf.wasm sizeof.wasm string.wasm test.wasm
 PREFIX=../..
 CC=clang
 LD=wasm-ld
@@ -28,21 +28,21 @@ clean:
 ##############################################################################
 # SOURCES
 
-printf.o: printf.c
+atof.o: atof.c
 
 atoi.o: atoi.c
 
-atof.o: atof.c
+cat.o: cat.c
 
 ctype.o: ctype.c
 
-sizeof.o: sizeof.c
-
 limits.o: limits.c
 
-string.o: string.c
+printf.o: printf.c
 
-cat.o: cat.c
+sizeof.o: sizeof.c
+
+string.o: string.c
 
 test.o: test.c
 
