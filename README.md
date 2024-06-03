@@ -51,7 +51,6 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 * stdin
 * stdout
 * stderr
-
 * CHAR\_MAX
 * CHAR\_MIN
 * INT\_MAX
