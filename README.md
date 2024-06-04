@@ -47,6 +47,7 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 ## Supported Globals
 
 * NULL
+* M\_PI
 * errno
 * stdin
 * stdout
