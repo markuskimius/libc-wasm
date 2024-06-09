@@ -14,6 +14,8 @@ int main() {
         printf("strlen(%s) => %zu\n", s1, strlen(s1));
         printf("strchr('%s', '%c') => %s\n", s1, 'l', strchr(s1, 'l'));
         printf("strrchr('%s', '%c') => %s\n", s1, 'l', strrchr(s1, 'l'));
+        printf("strchr('%s', '%c') => %s\n", s1, '\0', strchr(s1, '\0'));
+        printf("strrchr('%s', '%c') => %s\n", s1, '\0', strrchr(s1, '\0'));
     }
     printf("\n");
 

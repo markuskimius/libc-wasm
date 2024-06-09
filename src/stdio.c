@@ -475,8 +475,8 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
 
         /* Print the value */
         switch(*cp) {
-            case '%': _sprintc(bp, &fmt, cvalue); break;
-            case 'c': _sprintc(bp, &fmt, cvalue); break;
+            case '%': _sprintc(bp, &fmt, cvalue);      break;
+            case 'c': _sprintc(bp, &fmt, 0x01);        break; /* 0x01 is a placeholder; actual character (cvalue) is printed later */
             case 's': bp = svalue ? svalue : "(null)"; break; /* Point to the input */
             case 'f':                                                 zloc = _snprintf(bp, sizeof(buf), &fmt, fvalue); break;
             case 'i': fmt.base = 10;                                  zloc = _sprinti(bp, &fmt, ivalue); break;
@@ -507,11 +507,11 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
 
             /* Decimal part */
             if(*fp == '.') {
-                len += fmt.dwidth + 1;  /* +1 for '.' */
+                len += fmt.dwidth + 1;  /* +1 for '.'; len is the ideal length */
                 fp++;
 
                 while(*fp) {
-                    dlen++;
+                    dlen++;             /* dlen is the actual length from _snprintf */
                     fp++;
                 }
             }
@@ -534,7 +534,12 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
             nchar += _fputcr(stream, '0', fmt.width - len);
         }
 
-        nchar += _fputs(stream, bp);
+        /*
+        * Print the variable.  We handle characters specially because the
+        * character we want to print may be '\0'.
+        */
+        if(*cp == 'c') nchar += _fputc(stream, cvalue);
+        else nchar += _fputs(stream, bp);
 
         /*
         * Right pad a floating point number with zeros.  This is necessary if
