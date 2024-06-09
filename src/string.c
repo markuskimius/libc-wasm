@@ -34,6 +34,30 @@ size_t strlen(const char* s) {
     return i;
 }
 
+char* strchr(const char* s, int c) {
+    char* cp = NULL;
+
+    while(1) {
+        if(*s == c) { cp = (char*)s; break; }
+        if(*s == '\0') break;
+        s++;
+    }
+
+    return cp;
+}
+
+char* strrchr(const char* s, int c) {
+    char* cp = NULL;
+
+    while(1) {
+        if(*s == c) cp = (char*)s;
+        if(*s == '\0') break;
+        s++;
+    }
+
+    return cp;
+}
+
 int strcmp(const char* s1, const char* s2) {
     int cmp = 0;
 

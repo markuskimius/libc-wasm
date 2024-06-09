@@ -1,8 +1,9 @@
-printf
-atoi
 atof
-sizeof
-limits
-ctype
+atoi
 cat
+ctype
+limits
+printf
+sizeof
+string
 test

@@ -104,10 +104,12 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 * sbrk
 * snprintf
 * strcasecmp
+* strchr
 * strcmp
 * strlen
 * strncasecmp
 * strncmp
+* strrchr
 * tolower
 * toupper
 * vfprintf

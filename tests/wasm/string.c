@@ -12,6 +12,8 @@ int main() {
         const char* s1 = strings[i];
 
         printf("strlen(%s) => %zu\n", s1, strlen(s1));
+        printf("strchr('%s', '%c') => %s\n", s1, 'l', strchr(s1, 'l'));
+        printf("strrchr('%s', '%c') => %s\n", s1, 'l', strrchr(s1, 'l'));
     }
     printf("\n");
 
