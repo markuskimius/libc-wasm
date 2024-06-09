@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "limits.h"
+#include "math.h"
 
-#define NAN  (0.0 / 0.0)
 #define INF  (1.0 / 0.0)
 #define NINF (-1.0 / 0.0)
 
@@ -286,6 +286,12 @@ int main() {
         printf("%%15.20lf : |%15.20lf|\n", j);
         printf("\n");
     }
+
+    printf("DOUBLE TEST (DOUBLE=%lf)\n", M_PI);
+    printf("%%.1000lf  : |%.1000lf|\n", M_PI);
+    printf("%%1000.500lf  : |%1000.500lf|\n", M_PI);
+    printf("%%01000.500lf  : |%01000.500lf|\n", M_PI);
+    printf("\n");
 
     return 0;
 }

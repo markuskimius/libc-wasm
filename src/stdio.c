@@ -245,7 +245,7 @@ static size_t _sprinti(char* dest, _FORMAT* fmt, intmax_t value) {
     return zloc;
 }
 
-static size_t _sprintf(char* dest, _FORMAT* fmt, double value) {
+static size_t _snprintf(char* dest, size_t size, _FORMAT* fmt, double value) {
     size_t zloc = 0;
     size_t nchar = 0;
 
@@ -297,7 +297,7 @@ static size_t _sprintf(char* dest, _FORMAT* fmt, double value) {
             /* assert(frac <= 0); */
             dest[nchar++] = '.';
 
-            for(int i=0; i<fmt->dwidth; i++) {
+            for(size_t i=0; i<fmt->dwidth && i<size-1; i++) {
                 whole = frac * 10.0;
                 frac = frac * 10.0 - whole;
 
@@ -440,9 +440,9 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
     _FORMAT fmt;
 
     while(*cp) {
-        char buf[32];
+        char buf[64];
         char* bp = buf;
-        ssize_t len = 0;
+        ssize_t len = 0, ilen = 0, dlen = 0;
         int32_t zloc = 0;
         char* svalue = NULL;
         intmax_t ivalue = 0;
@@ -473,14 +473,12 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
                 break;
         }
 
-        /* FIXME: Handle large fmt.dwidth */
-
         /* Print the value */
         switch(*cp) {
             case '%': _sprintc(bp, &fmt, cvalue); break;
             case 'c': _sprintc(bp, &fmt, cvalue); break;
             case 's': bp = svalue;                break; /* Point to the input */
-            case 'f':                                                 zloc = _sprintf(bp, &fmt, fvalue); break;
+            case 'f':                                                 zloc = _snprintf(bp, sizeof(buf), &fmt, fvalue); break;
             case 'i': fmt.base = 10;                                  zloc = _sprinti(bp, &fmt, ivalue); break;
             case 'd': fmt.base = 10;                                  zloc = _sprinti(bp, &fmt, ivalue); break;
             case 'o': fmt.base = 8 ; fmt.sign = 'u';                  zloc = _sprinti(bp, &fmt, ivalue); break;
@@ -490,7 +488,37 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
             case 'p': fmt.base = 16; fmt.sign = 'u'; fmt.altform = 1; zloc = _sprinti(bp, &fmt, ivalue); break;
             default : return -1;
         }
-        len = strlen(bp);
+
+        /*
+        * Calculate the printed length so we know how much to pad on the left.
+        * We need to handle floating points specially because the floating
+        * point may be padded to the right as well.  Other types can just use
+        * the string length.
+        */
+        if(*cp == 'f') {
+            const char* fp = bp;
+
+            /* Integer part */
+            while(*fp && *fp != '.') {
+                ilen++;
+                len++;
+                fp++;
+            }
+
+            /* Decimal part */
+            if(*fp == '.') {
+                len += fmt.dwidth + 1;  /* +1 for '.' */
+                fp++;
+
+                while(*fp) {
+                    dlen++;
+                    fp++;
+                }
+            }
+        }
+        else {
+            len = strlen(bp);
+        }
 
         /* Left pad with spaces */
         if(len < fmt.width && !fmt.lalign && !fmt.zeropad) {
@@ -507,6 +535,19 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
         }
 
         nchar += _fputs(stream, bp);
+
+        /*
+        * Right pad a floating point number with zeros.  This is necessary if
+        * the caller could request a large decimal precision be printed; our
+        * buffer has a size limit so _snprintf() only populates decimals up to
+        * the limit of the buffer.  This is where we supplement the buffer with
+        * the additional precision requested by the caller with 0's.  We also
+        * need to take care to avoid adding zero right padding if the result is
+        * "nan" or "inf" which we can test with dlen > 0.
+        */
+        if(*cp == 'f' && 0 < dlen && dlen < fmt.dwidth) {
+            nchar += _fputcr(stream, '0', fmt.dwidth - dlen);
+        }
 
         /* Right pad with spaces */
         if(len < fmt.width && fmt.lalign) {
