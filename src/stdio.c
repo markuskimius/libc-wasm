@@ -477,7 +477,7 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
         switch(*cp) {
             case '%': _sprintc(bp, &fmt, cvalue); break;
             case 'c': _sprintc(bp, &fmt, cvalue); break;
-            case 's': bp = svalue;                break; /* Point to the input */
+            case 's': bp = svalue ? svalue : "(null)"; break; /* Point to the input */
             case 'f':                                                 zloc = _snprintf(bp, sizeof(buf), &fmt, fvalue); break;
             case 'i': fmt.base = 10;                                  zloc = _sprinti(bp, &fmt, ivalue); break;
             case 'd': fmt.base = 10;                                  zloc = _sprinti(bp, &fmt, ivalue); break;
