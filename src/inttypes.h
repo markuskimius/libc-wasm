@@ -19,8 +19,6 @@ typedef unsigned long       size_t;
 typedef int64_t             intmax_t;
 typedef uint64_t            uintmax_t;
 
-#define YYSIZE_T size_t
-
 
 #ifdef __cplusplus
 } /* extern "C" */
