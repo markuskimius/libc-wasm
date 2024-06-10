@@ -16,6 +16,7 @@ void* malloc(size_t size);
 void* realloc(void* ptr, size_t size);
 double atof(const char* nptr);
 int atoi(const char* nptr);
+__attribute__((import_module("env"), import_name("exit"))) extern void exit(int status);
 
 
 #ifdef __cplusplus

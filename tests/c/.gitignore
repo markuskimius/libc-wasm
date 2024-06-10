@@ -2,6 +2,7 @@ atof
 atoi
 cat
 ctype
+exit
 limits
 printf
 sizeof

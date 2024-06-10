@@ -1,4 +1,4 @@
-BINARIES=asm.wasm atof.wasm atoi.wasm cat.wasm ctype.wasm limits.wasm printf.wasm sizeof.wasm string.wasm test.wasm
+BINARIES=asm.wasm atof.wasm atoi.wasm cat.wasm ctype.wasm exit.wasm limits.wasm printf.wasm sizeof.wasm string.wasm test.wasm
 PREFIX=../..
 CC=clang
 LD=wasm-ld
@@ -37,6 +37,8 @@ atoi.o: atoi.c
 cat.o: cat.c
 
 ctype.o: ctype.c
+
+exit.o: exit.c
 
 limits.o: limits.c
 

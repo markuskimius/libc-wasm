@@ -100,6 +100,9 @@ def doMyThing(file):
     def write(fd:"i32", buf:"i32", count:"i32") -> "i32":
         return os.write(fd, bytearray(memory8[buf:buf+count]))
 
+    def exit(status:"i32") -> None:
+        sys.exit(status)
+
     with open(file, mode="rb") as fd:
         wasm = fd.read()
         module = Module(store, wasm)
@@ -107,6 +110,7 @@ def doMyThing(file):
             "env": {
                 "write"  : Function(store, write),
                 "read"   : Function(store, read),
+                "exit"   : Function(store, exit),
             }
         })
 

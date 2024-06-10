@@ -27,6 +27,15 @@ $ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprog
 ```
 
 
+## Imported functions
+
+The host language is expected to provide the following functions:
+
+* write
+* read
+* exit
+
+
 ## Supported Types
 
 * FILE

@@ -1,4 +1,4 @@
-BINARIES=atof atoi cat ctype limits printf sizeof string test
+BINARIES=atof atoi cat ctype exit limits printf sizeof string test
 # PREFIX=
 # CC=
 # LD=
@@ -35,6 +35,8 @@ atoi.o: ../wasm/atoi.c
 cat.o: ../wasm/cat.c
 
 ctype.o: ../wasm/ctype.c
+
+exit.o: ../wasm/exit.c
 
 limits.o: ../wasm/limits.c
 
