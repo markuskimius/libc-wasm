@@ -50,12 +50,12 @@ class opts:
 
 def usage():
     """\
-A skeleton program.
+A program to run a wasm binary.
 
 Usage: {SCRIPTNAME} [OPTIONS] [FILES]
 
 Options:
-  FILE                  File(s) to read.
+  FILE                  WASM file(s) to execute.
 """
 
     print(usage.__doc__.format(**globals()))

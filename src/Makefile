@@ -43,7 +43,7 @@ libc-wasm.a: _start.o ctype.o errno.o math.o stdio.o stdlib.o string.o unistd.o
 ##############################################################################
 # LIBRARY
 
-_start.o: _start.c
+_start.o: _start.c stdlib.h
 
 ctype.o: ctype.c ctype.h
 
