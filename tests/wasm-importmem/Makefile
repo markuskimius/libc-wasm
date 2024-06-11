@@ -47,6 +47,8 @@ exit.o: ../wasm/exit.c
 
 limits.o: ../wasm/limits.c
 
+main.o: ../wasm/main.c
+
 printf.o: ../wasm/printf.c
 
 sizeof.o: ../wasm/sizeof.c
