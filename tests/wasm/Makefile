@@ -1,9 +1,9 @@
-BINARIES=asm.wasm assert.wasm atof.wasm atoi.wasm cat.wasm ctype.wasm exit.wasm limits.wasm printf.wasm sizeof.wasm string.wasm test.wasm
+BINARIES=asm.wasm assert.wasm atof.wasm atoi.wasm cat.wasm ctype.wasm exit.wasm limits.wasm main.wasm printf.wasm sizeof.wasm string.wasm test.wasm
 PREFIX=../..
 CC=clang
 LD=wasm-ld
-CPPFLAGS=--target=wasm32 -Wno-incompatible-library-redeclaration -I$(PREFIX)/include -nostdlib
-LDFLAGS=--no-entry --export-all -L$(PREFIX)/lib
+CPPFLAGS=-I$(PREFIX)/include --target=wasm32
+LDFLAGS=-L$(PREFIX)/lib
 LDLIBS=-lc-wasm
 
 
@@ -43,6 +43,8 @@ ctype.o: ctype.c
 exit.o: exit.c
 
 limits.o: limits.c
+
+main.o: main.c
 
 printf.o: printf.c
 

@@ -22,18 +22,24 @@ $ sudo make PREFIX=/opt/wasm install
 To build a binary with libc-wasm:
 
 ```bash
-$ clang --target=wasm32 -Wno-incompatible-library-redeclaration -I/opt/wasm/include -nostdlib -c myprogram.c
-$ wasm-ld --no-entry --export-all -L/opt/wasm/lib myprogram.o -lc-wasm -o myprogram.wasm
+$ clang -I/opt/wasm/include --target=wasm32 -c myprogram.c
+$ wasm-ld -L/opt/wasm/lib myprogram.o -lc-wasm -o myprogram.wasm
 ```
 
 
-## Imported functions
+## Running the wasm program
 
 The host language is expected to provide the following functions:
 
 * write
 * read
-* exit
+* _exit
+
+Call the exported _start() function to run the wasm program.
+
+Note: _start() does not return.  Instead, the program ends by calling the
+_exit() function provided by the host language.  The host language is expected
+to terminate the wasm process once _exit() is called.
 
 
 ## Supported Types

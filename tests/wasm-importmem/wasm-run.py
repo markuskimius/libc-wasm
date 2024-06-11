@@ -101,7 +101,7 @@ def doMyThing(file):
     def write(fd:"i32", buf:"i32", count:"i32") -> "i32":
         return os.write(fd, bytearray(memory8[buf:buf+count]))
 
-    def exit(status:"i32") -> None:
+    def _exit(status:"i32") -> None:
         sys.exit(status)
 
     with open(file, mode="rb") as fd:
@@ -110,13 +110,13 @@ def doMyThing(file):
         instance = Instance(module, {
             "env": {
                 "memory" : memory,
-                "write"  : Function(store, write),
                 "read"   : Function(store, read),
-                "exit"   : Function(store, exit),
+                "write"  : Function(store, write),
+                "_exit"  : Function(store, _exit),
             }
         })
 
-        result = instance.exports.main(0, 0)
+        result = instance.exports._start()
 
 
 ##############################################################################

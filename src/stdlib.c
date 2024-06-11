@@ -338,3 +338,7 @@ int atoi(const char* nptr) {
 
     return neg ? -value : value;
 }
+
+void exit(int status) {
+    _exit(status);
+}

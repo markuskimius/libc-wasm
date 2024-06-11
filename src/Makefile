@@ -1,6 +1,6 @@
 ARCHIVE=libc-wasm.a
 CC=clang
-CPPFLAGS=--target=wasm32 -Wno-incompatible-library-redeclaration -I. -nostdlib
+CPPFLAGS=-I. --target=wasm32
 PREFIX=..
 
 
@@ -36,7 +36,7 @@ uninstall:
 ##############################################################################
 # ARCHIVE
 
-libc-wasm.a: stdio.o stdlib.o string.o unistd.o errno.o ctype.o math.o
+libc-wasm.a: ctype.o errno.o math.o start.o stdio.o stdlib.o string.o unistd.o
 	llvm-ar rcs $@ $^
 
 
@@ -48,6 +48,8 @@ ctype.o: ctype.c ctype.h
 errno.o: errno.c errno.h
 
 math.o: math.c math.h inttypes.h
+
+start.o: start.c start.h
 
 stdio.o: stdio.c stdio.h errno.h math.h stdlib.h string.h unistd.h
 

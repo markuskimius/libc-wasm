@@ -5,6 +5,7 @@ cat
 ctype
 exit
 limits
+main
 printf
 sizeof
 string
