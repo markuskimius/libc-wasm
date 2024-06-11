@@ -75,7 +75,6 @@ to terminate the wasm process once _exit() is called.
 * LLONG\_MIN
 * LONG\_MAX
 * LONG\_MIN
-* NULL
 * SHRT\_MAX
 * SHRT\_MIN
 * UCHAR\_MAX
