@@ -31,8 +31,8 @@ $ wasm-ld -L/opt/wasm/lib myprogram.o -lc-wasm -o myprogram.wasm
 
 The host language is expected to provide the following functions:
 
-* write
 * read
+* write
 * _exit
 
 Call the exported _start() function to run the wasm program.
