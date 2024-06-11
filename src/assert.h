@@ -16,7 +16,7 @@ extern "C" {
             #expr, __FUNCTION__, __FILE__, __LINE__                     \
         );                                                              \
         fprintf(stderr, "Abort\n");                                     \
-        exit(134);                                                      \
+        _exit(134);                                                     \
     }                                                                   \
 } while(0)
 
