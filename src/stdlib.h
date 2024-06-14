@@ -10,14 +10,16 @@ extern "C" {
 
 #define NULL ((void*) 0)
 
-void* sbrk(size_t incr);
-void free(void* ptr);
-void* malloc(size_t size);
-void* realloc(void* ptr, size_t size);
-double atof(const char* nptr);
+__attribute__((export_name("sbrk"))) void* sbrk(size_t incr);
+__attribute__((export_name("malloc"))) void* malloc(size_t size);
+__attribute__((export_name("realloc"))) void* realloc(void* ptr, size_t size);
+__attribute__((export_name("free"))) void free(void* ptr);
+
 int atoi(const char* nptr);
-void exit(int status);
+double atof(const char* nptr);
+
 __attribute__((import_module("env"), import_name("_exit"))) extern void _exit(int status);
+void exit(int status);
 
 
 #ifdef __cplusplus

@@ -174,6 +174,22 @@ void* malloc(size_t size) {
     return mbi->data;
 }
 
+void* realloc(void* ptr, size_t size) {
+    _MBINFO* mbi = _mbi_of(ptr);
+    _MBINFO* mbj = mbi->next;
+
+    /* Ensure next block exists, is contiguous, is free, and big enough */
+    if(mbi->next && mbi->next->free && mbi->size + mbi->next->size < size && (mbi->data + mbi->size == (int8_t*)mbj)) {
+        _mbi_merge(mbi);
+        return mbi;
+    }
+
+    /* Need to create new memory */
+    free(mbi);
+
+    return malloc(size);
+}
+
 void free(void* ptr) {
     _MBINFO* mbi = _mbi_of(ptr);
 
@@ -193,20 +209,28 @@ void free(void* ptr) {
     }
 }
 
-void* realloc(void* ptr, size_t size) {
-    _MBINFO* mbi = _mbi_of(ptr);
-    _MBINFO* mbj = mbi->next;
+int atoi(const char* nptr) {
+    const char* cp = nptr;
+    int value = 0;
+    int neg = 0;
 
-    /* Ensure next block exists, is contiguous, is free, and big enough */
-    if(mbi->next && mbi->next->free && mbi->size + mbi->next->size < size && (mbi->data + mbi->size == (int8_t*)mbj)) {
-        _mbi_merge(mbi);
-        return mbi;
+    /* Skip Whitespaces */
+    while(isspace(*cp)) cp++;
+
+    /* Sign */
+    if(*cp == '+' || *cp == '-') {
+        if(*cp == '-') neg = 1;
+        cp++;
     }
 
-    /* Need to create new memory */
-    free(mbi);
+    /* Number */
+    while(isdigit(*cp)) {
+        value *= 10;
+        value += (*cp - '0');
+        cp++;
+    }
 
-    return malloc(size);
+    return neg ? -value : value;
 }
 
 double atof(const char* nptr) {
@@ -310,30 +334,6 @@ double atof(const char* nptr) {
             factor *= exp[10];
             cp++;
         }
-    }
-
-    return neg ? -value : value;
-}
-
-int atoi(const char* nptr) {
-    const char* cp = nptr;
-    int value = 0;
-    int neg = 0;
-
-    /* Skip Whitespaces */
-    while(isspace(*cp)) cp++;
-
-    /* Sign */
-    if(*cp == '+' || *cp == '-') {
-        if(*cp == '-') neg = 1;
-        cp++;
-    }
-
-    /* Number */
-    while(isdigit(*cp)) {
-        value *= 10;
-        value += (*cp - '0');
-        cp++;
     }
 
     return neg ? -value : value;
