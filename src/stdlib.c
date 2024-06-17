@@ -31,6 +31,7 @@ typedef struct _MBINFO {
 #define _WORD_CEIL(size) (((int32_t)(size)+_WORD_MASK) & _WORD_IMASK)
 
 #define _MBINFO_SIZE     (_WORD_CEIL(sizeof(_MBINFO)))
+#define _PAGE_SIZE       (64 * 1024)
 
 
 /* ***************************************************************************
@@ -73,7 +74,7 @@ static inline _MBINFO* _mbi_new(size_t memsize, _MBINFO* prev, _MBINFO* next) {
 }
 
 static inline void _mbi_split(_MBINFO* mbi, size_t newsize) {
-    size_t nextsize = mbi->size - newsize - _MBINFO_SIZE;
+    ssize_t nextsize = (ssize_t)mbi->size - newsize - _MBINFO_SIZE;
 
     /*
     * Shrink this block and create a new empty next block, but only if there is
@@ -127,6 +128,22 @@ static inline _MBINFO* _mbi_of(int8_t* memdata) {
     return (_MBINFO*)(memdata - _MBINFO_SIZE);
 }
 
+static uint32_t _memory_size() {
+    asm(
+        "memory.size 0\n"
+        "return\n"
+    );
+
+    return 0;
+}
+
+static void _memory_grow(int npages) {
+    asm(
+        "local.get 0\n"
+        "memory.grow 0\n"
+    );
+}
+
 
 /* ***************************************************************************
 * PUBLIC FUNCTIONS
@@ -134,8 +151,16 @@ static inline _MBINFO* _mbi_of(int8_t* memdata) {
 
 void* sbrk(size_t incr) {
     int8_t* last = _heap_brk;
+    size_t memsize = (size_t)_memory_size() * _PAGE_SIZE;
 
     _heap_brk += _WORD_CEIL(incr);
+
+    /* Grow memory if needed */
+    if((size_t)_heap_brk > memsize) {
+        int npages = (((size_t)_heap_brk) - memsize + _PAGE_SIZE - 1) / _PAGE_SIZE;
+
+        _memory_grow(npages);
+    }
 
     return last;
 }
