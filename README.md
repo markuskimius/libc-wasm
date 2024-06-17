@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/markuskimius/libc-wasm?include_prereleases&label=Pre-release)](https://github.com/markuskimius/libc-wasm/releases)
 ![clang17](https://img.shields.io/badge/clang-17-blue.svg)
-![wasm](https://img.shields.io/badge/wasm-blue.svg)
+![wasm](https://img.shields.io/badge/wasm-32-blue.svg)
 
 A small subset of the C library to build a vanilla WASM program.
 
