@@ -1,4 +1,4 @@
-BINARIES=asm.wasm assert.wasm atof.wasm atoi.wasm cat.wasm ctype.wasm exit.wasm limits.wasm main.wasm printf.wasm sizeof.wasm string.wasm test.wasm
+BINARIES=asm.wasm assert.wasm atof.wasm atoi.wasm cat.wasm ctype.wasm exit.wasm limits.wasm main.wasm printf.wasm sizeof.wasm string.wasm test.wasm version.wasm
 PREFIX=../..
 CC=clang
 LD=wasm-ld
@@ -53,6 +53,8 @@ sizeof.o: sizeof.c
 string.o: string.c
 
 test.o: test.c
+
+version.o: version.c
 
 
 # vim:noet:
