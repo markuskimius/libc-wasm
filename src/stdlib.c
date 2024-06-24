@@ -1,6 +1,8 @@
 #include "stdlib.h"
 #include "assert.h"
 #include "ctype.h"
+#include "errno.h"
+#include "limits.h"
 #include "string.h"
 
 
@@ -362,6 +364,90 @@ double atof(const char* nptr) {
     }
 
     return neg ? -value : value;
+}
+
+long int strtol(const char* nptr, char** endptr, int base) {
+    long long value = strtoll(nptr, endptr, base);
+
+    if(value < LONG_MIN) {
+        errno = ERANGE;
+        value = LONG_MIN;
+    }
+    else if(LONG_MAX < value) {
+        errno = ERANGE;
+        value = LONG_MAX;
+    }
+
+    return value;
+}
+
+long long int strtoll(const char* nptr, char** endptr, int base) {
+    long long value = 0;
+    const char* cp = nptr;
+    int isvalid = 0;
+    int sign = 1;
+
+    /* Skip spaces */
+    while(isspace(*cp)) cp++;
+
+    /* Sign */
+    if(*cp == '+' || *cp == '-') {
+        if(*cp == '-') sign = -1;
+        cp++;
+    }
+
+    /* Prefix */
+    if((base == 0 || base == 16) && *cp == '0' && tolower(*(cp+1)) == 'x') {
+        cp += 2;
+        base = 16;
+    }
+    else if((base == 0 || base == 8) && *cp == '0') {
+        cp += 1;
+        base = 8;
+    }
+    else if(base == 0) {
+        base = 10;
+    }
+
+    /* Value */
+    while(*cp) {
+        int c = tolower(*cp);
+        int digit = 0;
+        long long last = value;
+
+        /* Convert */
+        if('0' <= c && c <= '9') digit = c - '0';
+        else if('a' <= c && c <= 'z') digit = c - 'a' + 10;
+        else break;
+
+        /* Validate */
+        if(base < digit) break;
+
+        /* Accumulate */
+        value = value * base + sign * digit;
+        isvalid = 1;
+        cp++;
+
+        /* Check for overflow/underflow */
+        if(sign < 0 && last < value) {
+            value = LLONG_MIN;
+            errno = ERANGE;
+            break;
+        }
+        else if(sign > 0 && value < last) {
+            value = LLONG_MAX;
+            errno = ERANGE;
+            break;
+        }
+    }
+
+    /* End pointer */
+    if(endptr) *endptr = (char*)cp;
+
+    /* Validate */
+    if(!isvalid) errno = EINVAL;
+
+    return value;
 }
 
 void exit(int status) {

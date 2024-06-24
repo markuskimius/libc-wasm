@@ -30,9 +30,18 @@ int main() {
         NULL,
     };
     const char** sp = strings;
+    int bases[] = { 0, 8, 10, 16 };
 
     while(*sp) {
         printf("%s = %d\n", *sp, atoi(*sp));
+
+        for(int i=0; i<sizeof(bases)/sizeof(*bases); i++) {
+            int base = bases[i];
+
+            printf("%s = %lld\n", *sp, strtoll(*sp, NULL, base));
+        }
+
+        printf("\n");
         sp++;
     }
 
