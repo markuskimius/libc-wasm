@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include "stdlib.h"
 #include "string.h"
 
 int main() {
@@ -16,6 +17,21 @@ int main() {
         printf("strrchr('%s', '%c') => %s\n", s1, 'l', strrchr(s1, 'l'));
         printf("strchr('%s', '%c') => %s\n", s1, '\0', strchr(s1, '\0'));
         printf("strrchr('%s', '%c') => %s\n", s1, '\0', strrchr(s1, '\0'));
+    }
+    printf("\n");
+
+    for(int i=0; i<sizeof(strings)/sizeof(*strings); i++) {
+        char* dup = strdup(strings[i]);
+
+        for(int j=i; j<sizeof(strings)/sizeof(*strings); j++) {
+            const char* s1 = dup;
+            const char* s2 = strings[j];
+
+            printf("('%s'=='%s') => %d\n", s1, s2, s1==s2);
+            printf("strcmp('%s', '%s') => %d\n", s1, s2, strcmp(s1, s2));
+        }
+
+        free(dup);
     }
     printf("\n");
 

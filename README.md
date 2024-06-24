@@ -120,9 +120,11 @@ to terminate the wasm process once _exit() is called.
 * strcasecmp
 * strchr
 * strcmp
+* strdup
 * strlen
 * strncasecmp
 * strncmp
+* strncpy
 * strrchr
 * tolower
 * toupper

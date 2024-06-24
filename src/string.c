@@ -58,6 +58,32 @@ char* strrchr(const char* s, int c) {
     return cp;
 }
 
+char* strdup(const char* s) {
+    size_t len = strlen(s);
+    char* dup = malloc(len+1);
+
+    if(dup) {
+        strncpy(dup, s, len+1);
+    }
+
+    return dup;
+}
+
+char* strncpy(char* dest, const char *src, size_t n) {
+    char* cp = dest;
+
+    while(n>0) {
+        *cp = *src;
+        if(*src == '\0') break;
+
+        src++;
+        cp++;
+        n--;
+    }
+
+    return dest;
+}
+
 int strcmp(const char* s1, const char* s2) {
     int cmp = 0;
 
