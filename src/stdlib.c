@@ -4,6 +4,7 @@
 #include "errno.h"
 #include "limits.h"
 #include "string.h"
+#include "math.h"
 
 
 /* ***************************************************************************
@@ -421,7 +422,7 @@ long long int strtoll(const char* nptr, char** endptr, int base) {
         else break;
 
         /* Validate */
-        if(base < digit) break;
+        if(base <= digit) break;
 
         /* Accumulate */
         value = value * base + sign * digit;
@@ -438,6 +439,149 @@ long long int strtoll(const char* nptr, char** endptr, int base) {
             value = LLONG_MAX;
             errno = ERANGE;
             break;
+        }
+    }
+
+    /* End pointer */
+    if(endptr) *endptr = (char*)cp;
+
+    /* Validate */
+    if(!isvalid) errno = EINVAL;
+
+    return value;
+}
+
+double strtod(const char* nptr, char** endptr) {
+    double value = 0;
+    const char* cp = nptr;
+    int isvalid = 0;
+    int base = 10;
+    int sign = 1;
+
+    /* Skip spaces */
+    while(isspace(*cp)) cp++;
+
+    /* Sign */
+    if(*cp == '+' || *cp == '-') {
+        if(*cp == '-') sign = -1;
+        cp++;
+    }
+
+    /* Infinity */
+    if(strncasecmp(cp, "infinity", strlen("infinity")) == 0) {
+        cp += strlen("infinity");
+        value = 1.0 / 0.0 * sign;
+        isvalid = 1;
+    }
+    /* Inf */
+    else if(strncasecmp(cp, "inf", 3) == 0) {
+        cp += 3;
+        value = 1.0 / 0.0 * sign;
+        isvalid = 1;
+    }
+    /* NaN */
+    else if(strncasecmp(cp, "nan", 3) == 0) {
+        cp += 3;
+        value = 0.0 / 0.0;
+        isvalid = 1;
+    }
+    /* Normal number */
+    else {
+        /* Prefix */
+        if(*cp == '0' && tolower(*(cp+1)) == 'x') {
+            cp += 2;
+            base = 16;
+        }
+
+        /* Whole part */
+        while(*cp) {
+            int c = tolower(*cp);
+            int digit = 0;
+
+            /* Convert */
+            if('0' <= c && c <= '9') digit = c - '0';
+            else if('a' <= c && c <= 'z') digit = c - 'a' + 10;
+            else break;
+
+            /* Validate */
+            if(base <= digit) break;
+
+            /* Accumulate */
+            value = value * base + sign * digit;
+            isvalid = 1;
+            cp++;
+
+            /* Check for overflow */
+            if(sign < 0 && isinf(value)) {
+                value = -HUGE_VAL;
+                errno = ERANGE;
+                break;
+            }
+            else if(sign > 0 && isinf(value)) {
+                value = HUGE_VAL;
+                errno = ERANGE;
+                break;
+            }
+        }
+
+        /* Decimal part */
+        if(*cp == '.') {
+            double exp = 1.0;
+
+            /* Skip '.' */
+            cp++;
+
+            while(*cp) {
+                int c = tolower(*cp);
+                int digit = 0;
+
+                /* Convert */
+                if('0' <= c && c <= '9') digit = c - '0';
+                else if('a' <= c && c <= 'z') digit = c - 'a' + 10;
+                else break;
+
+                /* Validate */
+                if(base <= digit) break;
+
+                /* Accumulate */
+                exp /= base;
+                value += sign * digit * exp;
+                cp++;
+            }
+        }
+
+        /* Exponent part */
+        if((base == 10 && tolower(*cp) == 'e') || (base == 16 && tolower(*cp) == 'p')) {
+            const double exp10[] = { 1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8, 1e9, 1e10 };
+            const double exp2[] = { 0x1p0, 0x1p1, 0x1p2, 0x1p3, 0x1p4, 0x1p5, 0x1p6, 0x1p7, 0x1p8, 0x1p9, 0x1p10 };
+            const double* exp = (base==10) ? exp10 : exp2;
+            double factor = 1.0;
+            int esign = 1;
+
+            /* Skip 'e' or 'p' */
+            cp++;
+
+            /* Sign */
+            if(*cp == '+' || *cp == '-') {
+                if(*cp == '-') esign = -1;
+                cp++;
+            }
+
+            while(*cp) {
+                int c = tolower(*cp);
+                int digit = 0;
+
+                /* Convert */
+                if('0' <= c && c <= '9') digit = c - '0';
+                else break;
+
+                /* Accumulate */
+                if(esign < 0) value /= exp[digit] * factor;
+                else value *= exp[digit] * factor;
+
+                factor *= exp[10];
+                cp++;
+            }
         }
     }
 

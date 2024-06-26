@@ -59,8 +59,10 @@ int main() {
 
     while(*sp) {
         double v = atof(*sp);
+        double v2 = strtod(*sp, NULL);
 
         printf("%15s => %15lf (%s)\n", *sp, v, sprintb(buf, v));
+        printf("%15s => %15lf (%s)\n", *sp, v2, sprintb(buf, v2));
         sp++;
     }
 

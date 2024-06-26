@@ -19,6 +19,7 @@ int atoi(const char* nptr);
 double atof(const char* nptr);
 long int strtol(const char* nptr, char** endptr, int base);
 long long int strtoll(const char* nptr, char** endptr, int base);
+double strtod(const char* nptr, char** endptr);
 
 __attribute__((import_module("env"), import_name("_exit"))) extern void _exit(int status);
 void exit(int status);
