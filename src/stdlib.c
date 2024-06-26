@@ -570,6 +570,7 @@ double strtod(const char* nptr, char** endptr) {
             while(*cp) {
                 int c = tolower(*cp);
                 int digit = 0;
+                double last = value;
 
                 /* Convert */
                 if('0' <= c && c <= '9') digit = c - '0';
@@ -581,6 +582,11 @@ double strtod(const char* nptr, char** endptr) {
 
                 factor *= exp[10];
                 cp++;
+
+                /* Check for underflow */
+                if(last == value) {
+                    errno = ERANGE;
+                }
             }
         }
     }
