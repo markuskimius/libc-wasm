@@ -1,4 +1,4 @@
-BINARIES=assert atof atoi cat ctype exit limits main printf sizeof string test
+BINARIES=alloc assert atof atoi cat ctype exit limits main printf sizeof string test
 # PREFIX=
 # CC=
 # LD=
@@ -27,6 +27,8 @@ clean:
 
 ##############################################################################
 # SOURCES
+
+alloc.o: ../wasm/alloc.c
 
 assert.o: ../wasm/assert.c
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 TESTS=(
+    alloc
     assert
     atof
     atoi

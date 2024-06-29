@@ -69,6 +69,27 @@ char* strdup(const char* s) {
     return dup;
 }
 
+char* strncat(char* dest, const char *src, size_t n) {
+    char* cp = dest;
+
+    /* Go to the end of dest */
+    while(*cp) {
+        cp++;
+    }
+
+    /* Strcpy */
+    while(n>0) {
+        *cp = *src;
+        if(*src == '\0') break;
+
+        src++;
+        cp++;
+        n--;
+    }
+
+    return dest;
+}
+
 char* strncpy(char* dest, const char *src, size_t n) {
     char* cp = dest;
 

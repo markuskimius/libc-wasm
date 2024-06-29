@@ -206,16 +206,27 @@ void* realloc(void* ptr, size_t size) {
     _MBINFO* mbi = _mbi_of(ptr);
     _MBINFO* mbj = mbi->next;
 
+    /* Resize only if needed */
+    if(size <= mbi->size) {
+        return mbi->data;
+    }
+
     /* Ensure next block exists, is contiguous, is free, and big enough */
     if(mbi->next && mbi->next->free && mbi->size + mbi->next->size < size && (mbi->data + mbi->size == (int8_t*)mbj)) {
         _mbi_merge(mbi);
-        return mbi;
+        return mbi->data;
     }
 
-    /* Need to create new memory */
-    free(mbi);
+    /* Allocate new memory */
+    if(1) {
+        int8_t* newdata = malloc(size);
 
-    return malloc(size);
+        /* Copy data */
+        memcpy(newdata, mbi->data, mbi->size);
+        free(mbi);
+
+        return newdata;
+    }
 }
 
 void free(void* ptr) {

@@ -1,4 +1,4 @@
-BINARIES=asm.wasm assert.wasm atof.wasm atoi.wasm cat.wasm ctype.wasm exit.wasm heap.wasm limits.wasm main.wasm printf.wasm sizeof.wasm string.wasm test.wasm version.wasm
+BINARIES=asm.wasm alloc.wasm assert.wasm atof.wasm atoi.wasm cat.wasm ctype.wasm exit.wasm heap.wasm limits.wasm main.wasm printf.wasm sizeof.wasm string.wasm test.wasm version.wasm
 PREFIX=../..
 CC=clang
 LD=wasm-ld
@@ -29,6 +29,8 @@ clean:
 # SOURCES
 
 asm.o: asm.c
+
+alloc.o: alloc.c
 
 assert.o: assert.c
 
