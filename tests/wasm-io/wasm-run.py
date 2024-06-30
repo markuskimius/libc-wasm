@@ -88,7 +88,7 @@ def main():
 class WasmIface:
     def __init__(self, instance):
         self.instance = instance
-        self.memory8 = instance.exports.memory.int8_view()
+        self.memory8 = instance.exports.memory.uint8_view()
         self.addrByString = dict()
 
     def __enter__(self):
@@ -145,7 +145,7 @@ def doMyThing(file):
             }
         })
 
-        memory8 = instance.exports.memory.int8_view()
+        memory8 = instance.exports.memory.uint8_view()
 
         with WasmIface(instance) as wasm:
             instance.exports.shout(wasm.strdup("Hello"), wasm.strdup("world"))

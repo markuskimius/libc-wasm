@@ -113,7 +113,7 @@ def doMyThing(file):
             }
         })
 
-        memory8 = instance.exports.memory.int8_view()
+        memory8 = instance.exports.memory.uint8_view()
         instance.exports._start()
 
 

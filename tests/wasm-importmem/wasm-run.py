@@ -89,7 +89,7 @@ def main():
 def doMyThing(file):
     store = Store()
     memory = Memory(store, MemoryType(minimum=2))
-    memory8 = memory.int8_view()
+    memory8 = memory.uint8_view()
 
     def read(fd:"i32", buf:"i32", count:"i32") -> "i32":
         data = os.read(fd, count)
