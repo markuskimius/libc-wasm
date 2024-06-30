@@ -223,7 +223,7 @@ void* realloc(void* ptr, size_t size) {
 
         /* Copy data */
         memcpy(newdata, mbi->data, mbi->size);
-        free(mbi);
+        free(mbi->data);
 
         return newdata;
     }
