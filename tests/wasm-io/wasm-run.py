@@ -111,10 +111,10 @@ class WasmIface:
     def strat(self, addr):
         len = 0
 
-        while(memory8[addr+len] != 0):
+        while(self.memory8[addr+len] != 0):
             len += 1
 
-        return bytearray(memory8[addr:addr+len]).decode("utf-8")
+        return bytearray(self.memory8[addr:addr+len]).decode("utf-8")
 
 
 def doMyThing(file):
