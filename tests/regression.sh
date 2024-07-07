@@ -8,6 +8,7 @@ TESTS=(
     ctype
     exit
     main
+    math
     printf
     string
 )

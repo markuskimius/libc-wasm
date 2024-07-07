@@ -193,6 +193,31 @@ static size_t _sprintu(char* dest, _FORMAT* fmt, uintmax_t value) {
     return nchar;
 }
 
+static size_t _sprintwf(char* dest, _FORMAT* fmt, double value) {
+    size_t nchar = 0;
+    size_t digits = 1;
+
+    /* Reduce to single digit */
+    while(value >= fmt->base) {
+        value /= fmt->base;
+        digits++;
+    }
+
+    /* Print one digit at a time */
+    while(digits-- > 0) {
+        int rem = value;
+
+        if(rem < 10) dest[nchar++] = rem + '0';
+        else if(fmt->ucase) dest[nchar++] = rem - 10 + 'A';
+        else dest[nchar++] = rem - 10 + 'a';
+
+        value -= rem;
+        value *= fmt->base;
+    }
+
+    return nchar;
+}
+
 static size_t _sprinti(char* dest, _FORMAT* fmt, intmax_t value) {
     size_t zloc = 0;
     size_t nchar = 0;
@@ -287,7 +312,7 @@ static size_t _snprintf(char* dest, size_t size, _FORMAT* fmt, double value) {
         value += round;
 
         /* Whole part */
-        nchar += _sprintu(&dest[nchar], fmt, value);
+        nchar += _sprintwf(&dest[nchar], fmt, value);
 
         /* Decimal part */
         if(fmt->dwidth > 0) {
@@ -440,7 +465,7 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
     _FORMAT fmt;
 
     while(*cp) {
-        char buf[64];
+        char buf[320];  /* Longest double that can be printed */
         char* bp = buf;
         ssize_t len = 0, ilen = 0, dlen = 0;
         int32_t zloc = 0;

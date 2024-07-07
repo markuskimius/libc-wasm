@@ -6,6 +6,7 @@ ctype
 exit
 limits
 main
+math
 printf
 sizeof
 string
