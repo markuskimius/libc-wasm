@@ -92,6 +92,7 @@ to terminate the wasm process once _exit() is called.
 * atof
 * atoi
 * clearerr
+* fabs
 * feof
 * ferror
 * fflush
@@ -112,6 +113,7 @@ to terminate the wasm process once _exit() is called.
 * malloc
 * memcpy
 * memset
+* pow
 * printf
 * putc
 * realloc

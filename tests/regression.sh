@@ -9,12 +9,16 @@ TESTS=(
     exit
     main
     math
+    pow
     printf
     string
 )
 
 function main() {
     for test in "${TESTS[@]}"; do
+        local outfile="regression.out/${test}.diff"
+        local skipfile="regression.out/${test}.skip"
+
         printf "%-10s .. " "$test"
 
         if [[ ! -x "c/${test}" ]]; then
@@ -22,8 +26,15 @@ function main() {
             continue
         fi
 
-        if diff -q <("c/${test}" 2>/dev/null) <(wasm/wasm-run.py "wasm/${test}.wasm" 2>/dev/null) >/dev/null; then
+        if diff -u <("c/${test}" 2>/dev/null) <(wasm/wasm-run.py "wasm/${test}.wasm" 2>/dev/null) > "$outfile"; then
             printf "Pass\n"
+            rm -f "$outfile"
+        elif [[ -r "$skipfile" ]]; then
+            if grep -vFf "$skipfile" <(tail -n +3 "$outfile") | grep '^[-+]' >&/dev/null; then
+                printf "Error\n"
+            else
+                printf "Ok\n"
+            fi
         else
             printf "Error\n"
         fi

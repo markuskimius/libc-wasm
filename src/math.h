@@ -12,7 +12,9 @@ extern "C" {
 
 int isnan(double x);
 int isinf(double x);
+double fabs(double x);
 double sqrt(double x);
+double pow(double x, double y);
 
 
 #ifdef __cplusplus
