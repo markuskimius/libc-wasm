@@ -14,6 +14,8 @@ int main() {
         printf("%10lf : isinf=%d isnan=%d\n", v, isinf(v), isnan(v));
     }
 
+    printf("%lf\n", sqrt(2));
+
     return 0;
 }
 
