@@ -1,23 +1,28 @@
 #include "stdio.h"
+#include "stdlib.h"
 #include "inttypes.h"
+#include "math.h"
+
+char* sprintb(char* str, double d) {
+    uint64_t v = *(uint64_t*)&d;
+    int i = 0;
+
+    for(i=0; i<64; i++) {
+        int bit = (v >> (63-i)) & 1;
+
+        str[i] = bit + '0';
+    }
+
+    str[i] = '\0';
+
+    return str;
+}
 
 int main() {
-    double values[] = {
-        0.0,
-        -0.0,
-        1.0,
-        -1.0,
-        0.0 / 0.0,
-        1.0 / 0.0,
-        -1.0 / 0.0,
-    };
+    double inf = 1.0 / 0.0;
 
-    for(int i=0; i<sizeof(values)/sizeof(*values); i++) {
-        double v = values[i];
-
-        if(v < 0.0 || (v == 0.0 && *(int64_t*)&v)) printf("%+lf = negative\n", v);
-        else printf("%+lf = positive\n", v);
-    }
+    printf("pow(-inf,3.141592)  -> %lf\n", pow(-inf,3.141592));
+    printf("pow(-inf,-3.141592) -> %lf\n", pow(-inf,-3.141592));
 
     return 0;
 }

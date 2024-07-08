@@ -193,31 +193,6 @@ static size_t _sprintu(char* dest, _FORMAT* fmt, uintmax_t value) {
     return nchar;
 }
 
-static size_t _sprintwf(char* dest, _FORMAT* fmt, double value) {
-    size_t nchar = 0;
-    size_t digits = 1;
-
-    /* Reduce to single digit */
-    while(value >= fmt->base) {
-        value /= fmt->base;
-        digits++;
-    }
-
-    /* Print one digit at a time */
-    while(digits-- > 0) {
-        int rem = value;
-
-        if(rem < 10) dest[nchar++] = rem + '0';
-        else if(fmt->ucase) dest[nchar++] = rem - 10 + 'A';
-        else dest[nchar++] = rem - 10 + 'a';
-
-        value -= rem;
-        value *= fmt->base;
-    }
-
-    return nchar;
-}
-
 static size_t _sprinti(char* dest, _FORMAT* fmt, intmax_t value) {
     size_t zloc = 0;
     size_t nchar = 0;
@@ -271,11 +246,15 @@ static size_t _sprinti(char* dest, _FORMAT* fmt, intmax_t value) {
 }
 
 static size_t _snprintf(char* dest, size_t size, _FORMAT* fmt, double value) {
+    int64_t* vp = (int64_t*)&value;
     size_t zloc = 0;
     size_t nchar = 0;
 
-    /* - for a negative number (-0.0 needs special handling) */
-    if(value < 0.0 || (value == 0.0 && *(uint64_t*)&value)) {
+    /* Round */
+    value += (*vp<0?-1:1) * 0.5 * pow(fmt->base, -fmt->dwidth);
+
+    /* - for a negative number; check the sign bit to handle -0.0 */
+    if(*vp < 0) {
         dest[nchar++] = '-';
         value = -value;
     }
@@ -291,28 +270,48 @@ static size_t _snprintf(char* dest, size_t size, _FORMAT* fmt, double value) {
     */
     zloc = nchar;
 
-    /* Special values */
+    /* NaN */
     if(isnan(value)) {
         dest[nchar++] = 'n';
         dest[nchar++] = 'a';
         dest[nchar++] = 'n';
         fmt->zeropad = 0;
     }
+    /* Info */
     else if(isinf(value)) {
         dest[nchar++] = 'i';
         dest[nchar++] = 'n';
         dest[nchar++] = 'f';
         fmt->zeropad = 0;
     }
+    /* Normal number */
     else {
-        double round = 0.5;
-
-        /* Round */
-        for(int i=0; i<fmt->dwidth; i++) round /= 10.0;
-        value += round;
-
         /* Whole part */
-        nchar += _sprintwf(&dest[nchar], fmt, value);
+        if(1) {
+            size_t ndigits = 1;
+            double save = value;
+
+            /* Reduce to single digit */
+            while(value >= fmt->base) {
+                value /= fmt->base;
+                ndigits++;
+            }
+
+            /* Print one digit at a time */
+            while(ndigits > 0) {
+                int rem = value;
+
+                if(rem < 10) dest[nchar++] = rem + '0';
+                else if(fmt->ucase) dest[nchar++] = rem - 10 + 'A';
+                else dest[nchar++] = rem - 10 + 'a';
+
+                value -= rem;
+                value *= fmt->base;
+                ndigits--;
+            }
+
+            value = save;
+        }
 
         /* Decimal part */
         if(fmt->dwidth > 0) {

@@ -7,7 +7,7 @@
 
 int main() {
     int ivalues[] = { 0, 789, -789 };
-    double fvalues[] = { 0.0, -0.0, 789.0123456789, -789.0123456789, INF, NINF, NAN };
+    double fvalues[] = { 0.0, -0.0, 789.0123456789, -789.0123456789, -12345678901234567890.123456789, INF, NINF, NAN };
 
     printf("STRING TEST\n");
     printf("|Hello, world!|\n");
