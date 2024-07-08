@@ -396,8 +396,6 @@ double strtod(const char* nptr, char** endptr) {
     }
     /* Normal number */
     else {
-        const char* cp0 = cp;
-
         /* Hexadecimal? */
         if(strncasecmp(cp, "0x", 2) == 0) {
             cp += strlen("0x");
@@ -421,9 +419,6 @@ double strtod(const char* nptr, char** endptr) {
             else break;
         }
 
-        /* Validate */
-        if(!isvalid) cp = cp0;
-
         /* Overflow check */
         if(isinf(value)) {
             value = HUGE_VAL;
@@ -431,7 +426,7 @@ double strtod(const char* nptr, char** endptr) {
         }
 
         /* Decimal part */
-        if(isvalid && *cp == '.') {
+        if(*cp == '.') {
             const char* cp1 = cp;
             double divisor = 1.0;
             size_t ndigit = 0;
@@ -456,6 +451,7 @@ double strtod(const char* nptr, char** endptr) {
                 else break;
 
                 ndigit++;
+                isvalid = 1;
             }
 
             /* Finalize */
