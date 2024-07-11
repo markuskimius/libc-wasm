@@ -9,9 +9,11 @@ A small subset of the C library to build a vanilla WASM program.
 
 ## Installation
 
-Requires clang17 or later, wasm-ld, and wasm-ar.
+Requires clang17 or later, wasm-ld, and llvm-ar.
+They all come with the llvm package.
 
 ```bash
+$ make
 $ sudo mkdir -p /opt/wasm
 $ sudo make PREFIX=/opt/wasm install
 ```
