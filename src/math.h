@@ -15,6 +15,9 @@ int isinf(double x);
 double fabs(double x);
 double sqrt(double x);
 double pow(double x, double y);
+double round(double x);
+double floor(double x);
+double ceil(double x);
 
 
 #ifdef __cplusplus

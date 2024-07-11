@@ -75,3 +75,35 @@ double pow(double x, double y) {
 
     return result;
 }
+
+double round(double x) {
+    int64_t* xp = (int64_t*)&x;
+
+    /*
+    * For some reason f64.nearest does not round up .5 number, so we simulate
+    * round using ceil and floor.
+    */
+
+    if(*xp < 0) return ceil(x - 0.5);
+    else return floor(x + 0.5);
+}
+
+double floor(double x) {
+    asm(
+        "local.get 0\n"
+        "f64.floor\n"
+        "return\n"
+    );
+
+    return x;
+}
+
+double ceil(double x) {
+    asm(
+        "local.get 0\n"
+        "f64.ceil\n"
+        "return\n"
+    );
+
+    return x;
+}

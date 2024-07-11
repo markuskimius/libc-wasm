@@ -93,6 +93,7 @@ to terminate the wasm process once _exit() is called.
 * assert
 * atof
 * atoi
+* ceil
 * clearerr
 * fabs
 * feof
@@ -100,6 +101,7 @@ to terminate the wasm process once _exit() is called.
 * fflush
 * fgetc
 * fileno
+* floor
 * fprintf
 * fputc
 * fread
@@ -119,6 +121,7 @@ to terminate the wasm process once _exit() is called.
 * printf
 * putc
 * realloc
+* round
 * sbrk
 * snprintf
 * sqrt
