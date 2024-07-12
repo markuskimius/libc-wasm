@@ -315,14 +315,14 @@ static size_t _snprintf(char* dest, size_t size, _FORMAT* fmt, double value) {
 
         /* Decimal part */
         if(fmt->dwidth > 0) {
-            int64_t whole = value;
-            double frac = value - whole;
+            double frac = value - floor(value);
 
             /* assert(frac <= 0); */
             dest[nchar++] = '.';
 
             for(size_t i=0; i<fmt->dwidth && i<size-1; i++) {
-                whole = frac * 10.0;
+                int whole = frac * 10.0;
+
                 frac = frac * 10.0 - whole;
 
                 dest[nchar++] = whole + '0';
