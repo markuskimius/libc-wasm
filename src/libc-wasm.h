@@ -7,7 +7,7 @@ extern "C" {
 
 
 #define LIBC_WASM_VERSION_MAJOR 0
-#define LIBC_WASM_VERSION_MINOR 11
+#define LIBC_WASM_VERSION_MINOR 12
 #define LIBC_WASM_VERSION_PATCH 1
 #define LIBC_WASM_VERSION_LT(major,minor,patch) ( \
     (                                             \
