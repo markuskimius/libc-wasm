@@ -321,11 +321,13 @@ static size_t _snprintf(char* dest, size_t size, _FORMAT* fmt, double value) {
             dest[nchar++] = '.';
 
             for(size_t i=0; i<fmt->dwidth && i<size-1; i++) {
-                int whole = frac * 10.0;
+                int rem = (int)(frac * fmt->base) % fmt->base;
 
-                frac = frac * 10.0 - whole;
+                frac = frac * fmt->base - rem;
 
-                dest[nchar++] = whole + '0';
+                if(rem < 10) dest[nchar++] = rem + '0';
+                else if(fmt->ucase) dest[nchar++] = rem - 10 + 'A';
+                else dest[nchar++] = rem - 10 + 'a';
             }
         }
     }
