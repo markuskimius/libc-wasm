@@ -168,6 +168,14 @@ void* sbrk(size_t incr) {
     return last;
 }
 
+void* calloc(size_t nmemb, size_t size) {
+    void* mem = malloc(nmemb * size);
+
+    memset(mem, 0, nmemb * size);
+
+    return mem;
+}
+
 void* malloc(size_t size) {
     _MBINFO* mbi = _mbi_head;
 

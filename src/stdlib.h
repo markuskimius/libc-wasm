@@ -12,6 +12,7 @@ extern "C" {
 
 __attribute__((export_name("sbrk"))) void* sbrk(size_t incr);
 __attribute__((export_name("malloc"))) void* malloc(size_t size);
+__attribute__((export_name("calloc"))) void* calloc(size_t nmemb, size_t size);
 __attribute__((export_name("realloc"))) void* realloc(void* ptr, size_t size);
 __attribute__((export_name("free"))) void free(void* ptr);
 

@@ -20,5 +20,13 @@ int main() {
 
     assert(hello != hello2);
 
+    free(hello2);
+    free(world);
+
+    hello = calloc(strlen("Hello")+1, 1);
+    for(int i=0; i<strlen("Hello")+1; i++) {
+        assert(hello[i] == 0);
+    }
+
     return 0;
 }

@@ -93,6 +93,7 @@ to terminate the wasm process once _exit() is called.
 * assert
 * atof
 * atoi
+* calloc
 * ceil
 * clearerr
 * fabs
