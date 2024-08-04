@@ -220,7 +220,7 @@ void* realloc(void* ptr, size_t size) {
     }
 
     /* Ensure next block exists, is contiguous, is free, and big enough */
-    if(mbi->next && mbi->next->free && mbi->size + mbi->next->size < size && (mbi->data + mbi->size == (int8_t*)mbj)) {
+    if(mbi->next && mbi->next->free && size <= (mbi->size + mbi->next->size) && (mbi->data + mbi->size == (int8_t*)mbj)) {
         _mbi_merge(mbi);
         return mbi->data;
     }
