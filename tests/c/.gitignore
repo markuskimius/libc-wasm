@@ -1,4 +1,5 @@
 alloc
+asprintf
 assert
 atof
 atoi

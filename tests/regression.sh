@@ -2,6 +2,7 @@
 
 TESTS=(
     alloc
+    asprintf
     assert
     atof
     atoi

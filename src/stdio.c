@@ -24,10 +24,17 @@ typedef struct _FORMAT {
 
 
 /* ***************************************************************************
+* CONSTANTS
+*/
+
+#define BUFSIZE 1024
+
+
+/* ***************************************************************************
 * GLOBALS
 */
 
-static char _sbufs[3][1024];
+static char _sbufs[3][BUFSIZE];
 static FILE _streams[3] = {
     { 0, _sbufs[0], sizeof(_sbufs[0]), 't' },
     { 1, _sbufs[1], sizeof(_sbufs[1]), 't' },
@@ -124,6 +131,12 @@ static size_t _fgetc(FILE* stream, char* cp) {
 
 static size_t _fputc(FILE* stream, char c) {
     size_t nchar = 0;
+
+    /* resize allocated buffer */
+    if(stream->index == stream->size && stream->mode == 'a') {
+        stream->size += BUFSIZE;
+        stream->buf = realloc(stream->buf, stream->size);
+    }
 
     if(stream->index == stream->size) fflush(stream);
 
@@ -456,6 +469,17 @@ int snprintf(char* str, size_t size, const char* format, ...) {
     return nc;
 }
 
+int asprintf(char** strp, const char* format, ...) {
+    va_list ap;
+    int nc;
+
+    va_start(ap, format);
+    nc = vasprintf(strp, format, ap);
+    va_end(ap);
+
+    return nc;
+}
+
 int vprintf(const char* format, va_list ap) {
     return vfprintf(stdout, format, ap);
 }
@@ -591,6 +615,12 @@ int vfprintf(FILE* stream, const char* format, va_list ap) {
     /* Flush the buffer to the file descriptor, if any */
     fflush(stream);
 
+    /* resize allocated buffer */
+    if(stream->index == stream->size && stream->mode == 'a') {
+        stream->size += BUFSIZE;
+        stream->buf = realloc(stream->buf, stream->size);
+    }
+
     /* Terminate the string (NUL is not included in nchar) */
     if(stream->index < stream->size) stream->buf[stream->index] = '\0';
     else {
@@ -607,4 +637,16 @@ int vsnprintf(char* str, size_t size, const char* format, va_list ap) {
     _finit(&file, str, size, -1, 't');
 
     return vfprintf(&file, format, ap);
+}
+
+int vasprintf(char** strp, const char* format, va_list ap) {
+    FILE file;
+    int nc;
+
+    _finit(&file, calloc(1,BUFSIZE), BUFSIZE, -1, 'a');
+
+    nc = vfprintf(&file, format, ap);
+    *strp = file.buf;
+
+    return nc;
 }

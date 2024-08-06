@@ -90,6 +90,7 @@ to terminate the wasm process once _exit() is called.
 
 ## Supported Functions/Macros
 
+* asprintf
 * assert
 * atof
 * atoi
@@ -141,6 +142,7 @@ to terminate the wasm process once _exit() is called.
 * strtoll
 * tolower
 * toupper
+* vasprintf
 * vfprintf
 * vprintf
 * vsnprintf
