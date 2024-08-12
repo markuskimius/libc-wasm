@@ -25,6 +25,10 @@ int isxdigit(int c) {
     return isdigit(c) || 'a' <= c && c <= 'f' || 'A' <= c && c <= 'F' ;
 }
 
+int isprint(int c) {
+    return 0x20<=c && c<=0x7e;
+}
+
 int toupper(int c) {
     const int lookup[] = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
     const int index = c - 'a';

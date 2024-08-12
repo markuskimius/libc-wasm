@@ -8,6 +8,7 @@ TESTS=(
     atoi
     ctype
     exit
+    isprint
     main
     math
     pow

@@ -112,6 +112,7 @@ to terminate the wasm process once _exit() is called.
 * getc
 * isatty
 * isdigit
+* isprint
 * isinf
 * isnan
 * isspace
