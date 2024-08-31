@@ -44,6 +44,8 @@ int vfprintf(FILE *stream, const char *format, va_list ap);
 int vsnprintf(char *str, size_t size, const char *format, va_list ap);
 int vasprintf(char** strp, const char* format, va_list ap);
 
+void perror(const char* s);
+
 
 #define EOF       -1
 #define getc(s)   fgetc(s)

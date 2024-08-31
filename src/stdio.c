@@ -650,3 +650,7 @@ int vasprintf(char** strp, const char* format, va_list ap) {
 
     return nc;
 }
+
+void perror(const char* s) {
+    fprintf(stderr, "%s: %s\n", s, strerror(errno));
+}

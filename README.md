@@ -69,6 +69,8 @@ to terminate the wasm process once _exit() is called.
 * stdin
 * stdout
 * stderr
+* sys\_nerr
+* sys\_errlist
 * CHAR\_MAX
 * CHAR\_MIN
 * INT\_MAX
@@ -120,6 +122,7 @@ to terminate the wasm process once _exit() is called.
 * malloc
 * memcpy
 * memset
+* perror
 * pow
 * printf
 * putc
@@ -132,6 +135,7 @@ to terminate the wasm process once _exit() is called.
 * strchr
 * strcmp
 * strdup
+* strerror
 * strlen
 * strncasecmp
 * strncat

@@ -1,5 +1,6 @@
 #include "string.h"
 #include "ctype.h"
+#include "errno.h"
 #include "stdlib.h"
 
 void* memcpy(void* dest, const void* src, size_t n) {
@@ -155,3 +156,12 @@ int strncasecmp(const char* s1, const char* s2, size_t n) {
     return cmp;
 }
 
+char* strerror(int errnum) {
+    char* text = NULL;
+
+    if(0 <= errnum && errnum < sys_nerr) {
+        text = (char*) sys_errlist[errnum];
+    }
+
+    return text;
+}

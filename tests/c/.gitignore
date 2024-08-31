@@ -5,6 +5,7 @@ atof
 atoi
 cat
 ctype
+error
 exit
 isprint
 limits
