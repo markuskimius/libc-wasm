@@ -17,6 +17,8 @@ int main() {
         }
     }
 
+    printf("pow(%lf,%lf) -> %lf\n", 3.0, 0.25, pow(3.0, 0.25));
+
     return 0;
 }
 

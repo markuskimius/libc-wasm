@@ -53,6 +53,9 @@ double pow(double x, double y) {
         ym &= (0xfffffffffffff << 11);
     }
 
+    /* Adjust for strictly-decimal exponent */
+    if(ye < 0) dp = sqrt(dp);
+
     /* Whole part of the exponent */
     while(ye >= 0) {
         result *= result;
