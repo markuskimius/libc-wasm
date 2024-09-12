@@ -387,6 +387,10 @@ int fflush(FILE* stream) {
     return flushed;
 }
 
+int putchar(int c) {
+    return putc(c, stdout);
+}
+
 int fgetc(FILE* stream) {
     char c;
     size_t nchar = _fgetc(stream, &c);

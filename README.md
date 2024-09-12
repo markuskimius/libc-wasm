@@ -120,12 +120,14 @@ to terminate the wasm process once _exit() is called.
 * isspace
 * isxdigit
 * malloc
+* memchr
 * memcpy
 * memset
 * perror
 * pow
 * printf
 * putc
+* putchar
 * realloc
 * round
 * sbrk
