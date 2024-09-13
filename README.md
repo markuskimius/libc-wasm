@@ -128,6 +128,7 @@ to terminate the wasm process once _exit() is called.
 * printf
 * putc
 * putchar
+* puts
 * realloc
 * round
 * sbrk

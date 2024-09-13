@@ -391,6 +391,14 @@ int putchar(int c) {
     return putc(c, stdout);
 }
 
+int puts(const char* s) {
+    int count = _fputs(stdout, s);
+
+    count += _fputc(stdout, '\n');
+
+    return count;
+}
+
 int fgetc(FILE* stream) {
     char c;
     size_t nchar = _fgetc(stream, &c);
