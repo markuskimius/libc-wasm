@@ -144,6 +144,7 @@ static void _memory_grow(int npages) {
     asm(
         "local.get 0\n"
         "memory.grow 0\n"
+        "drop\n"
     );
 }
 
