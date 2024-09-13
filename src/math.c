@@ -27,6 +27,7 @@ double fabs(double x) {
     return x;
 }
 
+__attribute__((optnone))
 double sqrt(double x) {
     asm(
         "local.get 0\n"
@@ -91,6 +92,7 @@ double round(double x) {
     else return floor(x + 0.5);
 }
 
+__attribute__((optnone))
 double floor(double x) {
     asm(
         "local.get 0\n"
@@ -101,6 +103,7 @@ double floor(double x) {
     return x;
 }
 
+__attribute__((optnone))
 double ceil(double x) {
     asm(
         "local.get 0\n"

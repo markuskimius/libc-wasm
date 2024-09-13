@@ -1,6 +1,6 @@
 ARCHIVE=libc-wasm.a
 CC=clang
-CPPFLAGS=-I. --target=wasm32
+CPPFLAGS=-I. --target=wasm32 -g
 PREFIX=..
 
 

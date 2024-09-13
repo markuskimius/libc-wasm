@@ -131,6 +131,7 @@ static inline _MBINFO* _mbi_of(int8_t* memdata) {
     return (_MBINFO*)(memdata - _MBINFO_SIZE);
 }
 
+__attribute__((optnone))
 static uint32_t _memory_size() {
     asm(
         "memory.size 0\n"
@@ -140,6 +141,7 @@ static uint32_t _memory_size() {
     return 0;
 }
 
+__attribute__((optnone))
 static void _memory_grow(int npages) {
     asm(
         "local.get 0\n"
@@ -212,48 +214,63 @@ void* malloc(size_t size) {
 }
 
 void* realloc(void* ptr, size_t size) {
-    _MBINFO* mbi = _mbi_of(ptr);
-    _MBINFO* mbj = mbi->next;
-
-    /* Resize only if needed */
-    if(size <= mbi->size) {
-        return mbi->data;
+    if(ptr == NULL && size == 0) {
+        return NULL;
     }
-
-    /* Ensure next block exists, is contiguous, is free, and big enough */
-    if(mbi->next && mbi->next->free && size <= (mbi->size + mbi->next->size) && (mbi->data + mbi->size == (int8_t*)mbj)) {
-        _mbi_merge(mbi);
-        return mbi->data;
+    else if(ptr == NULL) {
+        return malloc(size);
     }
+    else if(size == 0) {
+        free(ptr);
 
-    /* Allocate new memory */
-    if(1) {
-        int8_t* newdata = malloc(size);
+        return NULL;
+    }
+    else {
+        _MBINFO* mbi = _mbi_of(ptr);
+        _MBINFO* mbj = mbi->next;
 
-        /* Copy data */
-        memcpy(newdata, mbi->data, mbi->size);
-        free(mbi->data);
+        /* Resize only if needed */
+        if(size <= mbi->size) {
+            return mbi->data;
+        }
 
-        return newdata;
+        /* Ensure next block exists, is contiguous, is free, and big enough */
+        if(mbi->next && mbi->next->free && size <= (mbi->size + mbi->next->size) && (mbi->data + mbi->size == (int8_t*)mbj)) {
+            _mbi_merge(mbi);
+            return mbi->data;
+        }
+
+        /* Allocate new memory */
+        if(1) {
+            int8_t* newdata = malloc(size);
+
+            /* Copy data */
+            memcpy(newdata, mbi->data, mbi->size);
+            free(mbi->data);
+
+            return newdata;
+        }
     }
 }
 
 void free(void* ptr) {
-    _MBINFO* mbi = _mbi_of(ptr);
+    if(ptr) {
+        _MBINFO* mbi = _mbi_of(ptr);
 
-    assert(!mbi->free);
+        assert(!mbi->free);
 
-    /* Flag this block as free */
-    mbi->free = 1;
+        /* Flag this block as free */
+        mbi->free = 1;
 
-    /* Merge with next block if free */
-    if(mbi->next && mbi->next->free) {
-        _mbi_merge(mbi);
-    }
+        /* Merge with next block if free */
+        if(mbi->next && mbi->next->free) {
+            _mbi_merge(mbi);
+        }
 
-    /* Merge with prev block if free */
-    if(mbi->prev && mbi->prev->free) {
-        _mbi_merge(mbi->prev);
+        /* Merge with prev block if free */
+        if(mbi->prev && mbi->prev->free) {
+            _mbi_merge(mbi->prev);
+        }
     }
 }
 
