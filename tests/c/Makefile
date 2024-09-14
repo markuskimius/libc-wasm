@@ -1,4 +1,4 @@
-BINARIES=alloc asprintf assert atof atoi cat ctype error exit isprint limits main math pow printf sizeof string test
+BINARIES=alloc alloc2 asprintf assert atof atoi cat ctype error exit isprint limits main math pow printf sizeof string test
 # PREFIX=
 # CC=
 # LD=
@@ -29,6 +29,8 @@ clean:
 # SOURCES
 
 alloc.o: ../wasm/alloc.c
+
+alloc2.o: ../wasm/alloc2.c
 
 asprintf.o: ../wasm/asprintf.c
 
