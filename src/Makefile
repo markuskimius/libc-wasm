@@ -32,8 +32,8 @@ uninstall:
 		echo $(RM) $(INCDIR)/$$i;     \
 		$(RM) $(INCDIR)/$$i;          \
 	done
-	rmdir -p $(INCDIR) || true
-	rmdir -p $(LIBDIR) || true
+	rmdir -p $(INCDIR) 2>/dev/null || true
+	rmdir -p $(LIBDIR) 2>/dev/null || true
 
 
 ##############################################################################
