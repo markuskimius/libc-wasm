@@ -1,7 +1,10 @@
-ARCHIVE=libc-wasm.a
-CC=clang
-CPPFLAGS=-I. --target=wasm32 -g
-PREFIX=..
+ARCHIVE:=libc-wasm.a
+CC:=clang
+CPPFLAGS:=-I. --target=wasm32 -g
+PREFIX:=..
+EPREFIX:=$(PREFIX)
+LIBDIR:=$(EPREFIX)/lib
+INCDIR:=$(PREFIX)/include
 
 
 ##############################################################################
@@ -15,22 +18,22 @@ clean:
 	$(RM) $(ARCHIVE) *.o
 
 install: $(ARCHIVE)
-	install -m 755 -d $(PREFIX)/lib
-	install -m 755 -d $(PREFIX)/include
-	install -m 644 $(ARCHIVE) $(PREFIX)/lib
+	install -m 755 -d $(LIBDIR)
+	install -m 755 -d $(INCDIR)
+	install -m 644 $(ARCHIVE) $(LIBDIR)
 	@for i in *.h; do                              \
-		echo install -m 644 $$i $(PREFIX)/include; \
-		install -m 644 $$i $(PREFIX)/include;      \
+		echo install -m 644 $$i $(INCDIR); \
+		install -m 644 $$i $(INCDIR);      \
 	done
 
 uninstall:
-	$(RM) $(PREFIX)/lib/$(ARCHIVE)
+	$(RM) $(LIBDIR)/$(ARCHIVE)
 	@for i in *.h; do                         \
-		echo $(RM) $(PREFIX)/include/$$i;     \
-		$(RM) $(PREFIX)/include/$$i;          \
+		echo $(RM) $(INCDIR)/$$i;     \
+		$(RM) $(INCDIR)/$$i;          \
 	done
-	rmdir $(PREFIX)/include
-	rmdir $(PREFIX)/lib
+	rmdir -p $(INCDIR) || true
+	rmdir -p $(LIBDIR) || true
 
 
 ##############################################################################
