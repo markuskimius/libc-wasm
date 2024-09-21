@@ -1,0 +1,3198 @@
+alloc.wasm
+
+real	0m0.141s
+user	0m0.126s
+sys	0m0.020s
+
+alloc2.wasm
+
+real	0m0.413s
+user	0m0.399s
+sys	0m0.020s
+
+asm.wasm
+
+real	0m0.082s
+user	0m0.072s
+sys	0m0.012s
+
+asm2.wasm
+
+real	0m0.078s
+user	0m0.072s
+sys	0m0.013s
+
+asprintf.wasm
+
+real	0m0.120s
+user	0m0.113s
+sys	0m0.013s
+
+assert.wasm
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+Assertion failed: (M_PI < 3.14), function main, file assert.c, line 9.
+Abort
+
+real	0m0.119s
+user	0m0.109s
+sys	0m0.018s
+
+atof.wasm
+
+real	0m1.252s
+user	0m1.221s
+sys	0m0.041s
+
+atoi.wasm
+
+real	0m2.009s
+user	0m1.952s
+sys	0m0.064s
+
+ctype.wasm
+
+real	0m1.058s
+user	0m1.025s
+sys	0m0.039s
+
+error.wasm
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+main: Bad file descriptor
+
+real	0m0.097s
+user	0m0.090s
+sys	0m0.015s
+
+exit.wasm
+
+real	0m0.079s
+user	0m0.073s
+sys	0m0.013s
+
+isprint.wasm
+
+real	0m1.217s
+user	0m1.181s
+sys	0m0.043s
+
+limits.wasm
+
+real	0m0.309s
+user	0m0.298s
+sys	0m0.020s
+
+main.wasm
+
+real	0m0.080s
+user	0m0.073s
+sys	0m0.012s
+
+math.wasm
+
+real	0m0.352s
+user	0m0.339s
+sys	0m0.019s
+
+pow.wasm
+
+real	0m2.243s
+user	0m2.177s
+sys	0m0.067s
+
+printf.wasm
+
+real	0m15.985s
+user	0m15.528s
+sys	0m0.441s
+
+sizeof.wasm
+
+real	0m0.178s
+user	0m0.169s
+sys	0m0.016s
+
+string.wasm
+
+real	0m1.284s
+user	0m1.249s
+sys	0m0.043s
+
+test.wasm
+
+real	0m0.095s
+user	0m0.088s
+sys	0m0.012s
+
+version.wasm
+
+real	0m1.643s
+user	0m1.595s
+sys	0m0.055s
+

@@ -28,7 +28,7 @@ function main() {
             continue
         fi
 
-        if diff -u <("c/${test}" 2>/dev/null) <(wasm/wasmtime-run.py "wasm/${test}.wasm" 2>/dev/null) > "$outfile"; then
+        if diff -u <("c/${test}" 2>/dev/null) <(wasm/wasmer-run.py "wasm/${test}.wasm" 2>/dev/null) > "$outfile"; then
             printf "Pass\n"
             rm -f "$outfile"
         elif [[ -r "$skipfile" ]]; then

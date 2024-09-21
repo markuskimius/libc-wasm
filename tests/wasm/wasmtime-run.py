@@ -41,6 +41,7 @@ SCRIPTNAME = os.path.basename(__file__)
 
 class opts:
     files = []
+    nrun = 1
 
 
 ##############################################################################
@@ -54,6 +55,7 @@ Usage: {SCRIPTNAME} [OPTIONS] [FILES]
 
 Options:
   FILE                  WASM file(s) to execute.
+  -n <N>                Run it N times (Default={opts.nrun})
 """
 
     print(usage.__doc__.format(**globals()))
@@ -67,11 +69,13 @@ def main():
 
     # Process options
     getopt = getopts.getopts(sys.argv, {
-        "h" : 0, "help" : 0,
+        "h" :      0, "help" : 0,
+        "n" : is_int,
     })
 
     for c in getopt:
         if   c in ("-")         : opts.files.append(getopt.optarg)
+        elif c in ("n")         : opts.nrun = int(getopt.optarg)
         elif c in ("h", "help") : usage(); sys.exit(0)
         else                    : errcount += 1
 
@@ -84,12 +88,23 @@ def main():
         doMyThing(file)
 
 
+def is_int(s_int):
+    isint = True
+
+    try: int(s_int)
+    except: isint = False
+
+    return isint
+
+
 class Exit(Exception):
     def __init__(self, code):
         self.code = code
 
 
 def doMyThing(file):
+    last = 0
+
     def __read(fd, buf, count):
         data = os.read(fd, count)
         count = len(data);
@@ -117,7 +132,13 @@ def doMyThing(file):
     memory8 = instance.exports(store)["memory"].get_buffer_ptr(store)
     _start = instance.exports(store)["_start"]
 
-    _start(store)
+    for i in range(opts.nrun):
+        try:
+            _start(store)
+        except Exit as e:
+            last = e.code
+
+    return last
 
 
 ##############################################################################
@@ -126,8 +147,6 @@ def doMyThing(file):
 if __name__ == "__main__":
     try:
         main()
-    except Exit as e:
-        sys.exit(e.code)
     except KeyboardInterrupt:
         print("")
         sys.exit(errno.EOWNERDEAD)
