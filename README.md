@@ -108,6 +108,7 @@ to terminate the wasm process once _exit() is called.
 * floor
 * fprintf
 * fputc
+* fputs
 * fread
 * free
 * fwrite

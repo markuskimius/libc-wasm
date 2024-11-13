@@ -392,9 +392,13 @@ int putchar(int c) {
 }
 
 int puts(const char* s) {
-    int count = _fputs(stdout, s);
+    return fputs(s, stdout);
+}
 
-    count += _fputc(stdout, '\n');
+int fputs(const char* s, FILE* stream) {
+    int count = _fputs(stream, s);
+
+    count += _fputc(stream, '\n');
 
     return count;
 }

@@ -33,6 +33,7 @@ int ferror(FILE* stream);
 int fflush(FILE *stream);
 int putchar(int c);
 int puts(const char* s);
+int fputs(const char* s, FILE* stream);
 void clearerr(FILE* stream);
 size_t fread(void* ptr, size_t size, size_t nmemb, FILE* stream);
 size_t fwrite(const void* ptr, size_t size, size_t nmemb, FILE* stream);
