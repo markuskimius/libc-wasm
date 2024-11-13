@@ -27,7 +27,7 @@ import os
 import sys
 import errno
 import getopts
-from wasmer import engine, Store, Module, Instance, ImportObject, Function, Memory, MemoryType
+from wasmer import engine, Store, Module, Instance, ImportObject, Function, FunctionType, Type
 from wasmer_compiler_llvm import Compiler
 
 __copyright__ = "Copyright 2024 Mark Kim"
@@ -103,36 +103,38 @@ class Exit(Exception):
         self.code = code
 
 
-def doMyThing(file):
-    last = 0
-    store = Store()
-    memory8 = None
-
-    def read(fd:"i32", buf:"i32", count:"i32") -> "i32":
+class Iface:
+    def read(self, fd:"i32", buf:"i32", count:"i32") -> "i32":
         data = os.read(fd, count)
         count = len(data);
-        memory8[buf:buf+count] = data;
+        self.memory8[buf:buf+count] = data;
 
         return count
 
-    def write(fd:"i32", buf:"i32", count:"i32") -> "i32":
-        return os.write(fd, bytearray(memory8[buf:buf+count]))
+    def write(self, fd:"i32", buf:"i32", count:"i32") -> "i32":
+        return os.write(fd, bytearray(self.memory8[buf:buf+count]))
 
-    def _exit(status:"i32") -> None:
+    def _exit(self, status:"i32") -> None:
         raise Exit(status)
+
+
+def doMyThing(file):
+    last = 0
+    store = Store()
+    iface = Iface()
 
     with open(file, mode="rb") as fd:
         wasm = fd.read()
         module = Module(store, wasm)
         instance = Instance(module, {
             "env": {
-                "read"   : Function(store, read),
-                "write"  : Function(store, write),
-                "_exit"  : Function(store, _exit),
+                "read"   : Function(store, iface.read),
+                "write"  : Function(store, iface.write),
+                "_exit"  : Function(store, iface._exit),
             }
         })
 
-        memory8 = instance.exports.memory.uint8_view()
+        iface.memory8 = instance.exports.memory.uint8_view()
 
         for i in range(opts.nrun):
             try:
