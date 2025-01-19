@@ -11,6 +11,7 @@ A small subset of the C library to build a vanilla WASM program.
 
 Requires clang17 or later, wasm-ld, and llvm-ar.
 They all come with the llvm package.
+You may also need to install the lld package.
 
 ```bash
 $ make
