@@ -3,6 +3,7 @@
 
 #include "stdio.h"
 #include "stdlib.h"
+#include "libc-wasm.h"
 
 #ifdef __cplusplus
 extern "C" {

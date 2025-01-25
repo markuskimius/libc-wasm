@@ -2,7 +2,8 @@
 #define _STDIO_H_
 
 #include <stdarg.h>
-#include "inttypes.h"
+#include "stddef.h"
+#include "libc-wasm.h"
 
 #ifdef __cplusplus
 extern "C" {

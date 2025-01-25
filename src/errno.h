@@ -1,6 +1,8 @@
 #ifndef _ERRNO_H_
 #define _ERRNO_H_
 
+#include "libc-wasm.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif

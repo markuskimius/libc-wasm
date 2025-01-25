@@ -1,7 +1,8 @@
 #ifndef _STDLIB_H_
 #define _STDLIB_H_
 
-#include "inttypes.h"
+#include "stddef.h"
+#include "libc-wasm.h"
 
 #ifdef __cplusplus
 extern "C" {

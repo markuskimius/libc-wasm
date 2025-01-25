@@ -52,29 +52,47 @@ ctype.o: ctype.c ctype.h
 
 errno.o: errno.c errno.h
 
-math.o: math.c math.h inttypes.h
+math.o: math.c math.h stdio.h inttypes.h
 
-stdio.o: stdio.c stdio.h errno.h math.h stdlib.h string.h unistd.h
+stdio.o: stdio.c stdio.h errno.h inttypes.h math.h stdlib.h string.h unistd.h
 
-stdlib.o: stdlib.c stdlib.h assert.h ctype.h string.h
+stdlib.o: stdlib.c stdlib.h assert.h ctype.h errno.h inttypes.h limits.h math.h string.h
 
-string.o: string.c string.h ctype.h stdlib.h
+string.o: string.c string.h ctype.h errno.h inttypes.h stdlib.h
 
 unistd.o: unistd.c unistd.h
 
-assert.h: stdio.h
+assert.h: stdio.h stdlib.h libc-wasm.h
 	touch $@
 
-stdio.h: inttypes.h
+ctype.h: libc-wasm.h
 	touch $@
 
-stdlib.h: inttypes.h
+errno.h: libc-wasm.h
 	touch $@
 
-string.h: inttypes.h
+inttypes.h: libc-wasm.h
 	touch $@
 
-unistd.h: inttypes.h
+limits.h: libc-wasm.h
+	touch $@
+
+math.h: libc-wasm.h
+	touch $@
+
+stddef.h: libc-wasm.h
+	touch $@
+
+stdio.h: stddef.h libc-wasm.h
+	touch $@
+
+stdlib.h: stddef.h libc-wasm.h
+	touch $@
+
+string.h: stddef.h libc-wasm.h
+	touch $@
+
+unistd.h: stddef.h libc-wasm.h
 	touch $@
 
 

@@ -1,6 +1,8 @@
 #ifndef _CTYPE_H_
 #define _CTYPE_H_
 
+#include "libc-wasm.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif

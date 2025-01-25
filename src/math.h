@@ -1,6 +1,8 @@
 #ifndef _MATH_H_
 #define _MATH_H_
 
+#include "libc-wasm.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
