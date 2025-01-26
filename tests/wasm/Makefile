@@ -1,4 +1,4 @@
-BINARIES=asm.wasm alloc.wasm alloc2.wasm asprintf.wasm assert.wasm atof.wasm atoi.wasm cat.wasm ctype.wasm error.wasm exit.wasm heap.wasm isprint.wasm limits.wasm main.wasm math.wasm pow.wasm printf.wasm sizeof.wasm string.wasm test.wasm version.wasm
+BINARIES=asm.wasm alloc.wasm alloc2.wasm asprintf.wasm assert.wasm atof.wasm atoi.wasm cat.wasm ctype.wasm error.wasm exit.wasm heap.wasm isprint.wasm libc-wasm.wasm limits.wasm main.wasm math.wasm pow.wasm printf.wasm sizeof.wasm string.wasm test.wasm version.wasm
 PREFIX=../..
 CC=clang
 LD=wasm-ld
@@ -53,6 +53,8 @@ exit.o: exit.c
 heap.o: heap.c
 
 isprint.o: isprint.c
+
+libc-wasm.o: libc-wasm.c
 
 limits.o: limits.c
 

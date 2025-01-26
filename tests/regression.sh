@@ -13,6 +13,7 @@ TESTS=(
     math
     pow
     printf
+    sizeof
     string
 )
 

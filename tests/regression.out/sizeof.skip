@@ -1,0 +1,35 @@
+--- /dev/fd/63	2025-01-25 21:40:36
++++ /dev/fd/62	2025-01-25 21:40:36
+@@ -1,10 +1,10 @@
+ sizeof(char)      : 1
+ sizeof(short)     : 2
+ sizeof(int)       : 4
+-sizeof(long)      : 8
++sizeof(long)      : 4
+ sizeof(long long) : 8
+-sizeof(size_t)    : 8
+-sizeof(void*)     : 8
++sizeof(size_t)    : 4
++sizeof(void*)     : 4
+ sizeof(int8_t)    : 1
+ sizeof(int16_t)   : 2
+ sizeof(int32_t)   : 4
+@@ -18,15 +18,15 @@
+ CHAR_MAX          : 127
+ SHRT_MAX          : 32767
+ INT_MAX           : 2147483647
+-LONG_MAX          : 9223372036854775807
++LONG_MAX          : 2147483647
+ LLONG_MAX         : 9223372036854775807
+ CHAR_MIN          : -128
+ SHRT_MIN          : -32768
+ INT_MIN           : -2147483648
+-LONG_MIN          : -9223372036854775808
++LONG_MIN          : -2147483648
+ LLONG_MIN         : -9223372036854775808
+ UCHAR_MAX         : 255
+ USHRT_MAX         : 65535
+ UINT_MAX          : 4294967295
+-ULONG_MAX         : 18446744073709551615
++ULONG_MAX         : 4294967295
+ ULLONG_MAX        : 18446744073709551615

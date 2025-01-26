@@ -6,7 +6,15 @@ extern "C" {
 #endif
 
 
-#define LIBC_WASM 1
+#if   defined(__wasm32) || defined(__wasm32__)
+    #define LIBC_WASM 32
+#elif defined(__wasm64) || defined(__wasm64__)
+    #define LIBC_WASM 64
+#else
+    #define LIBC_WASM 1
+#endif
+
+#define LIBC_WASM_NALIGN        __BIGGEST_ALIGNMENT__
 #define LIBC_WASM_VERSION_MAJOR 0
 #define LIBC_WASM_VERSION_MINOR 20
 #define LIBC_WASM_VERSION_PATCH 0
