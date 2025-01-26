@@ -28,14 +28,7 @@ typedef struct _MBINFO {
 #define _NAN             (0.0 / 0.0)
 #define _INF             (1.0 / 0.0)
 
-#define _WORD_T          int32_t
-#define _WORD_SIZE       (sizeof(_WORD_T))
-#define _WORD_MASK       (_WORD_SIZE-1)
-#define _WORD_IMASK      (~_WORD_MASK)
-#define _WORD_CEIL(size) (((int32_t)(size)+_WORD_MASK) & _WORD_IMASK)
-
-#define _MBINFO_SIZE     (_WORD_CEIL(sizeof(_MBINFO)))
-#define _PAGE_SIZE       (64 * 1024)
+#define _MBINFO_SIZE     (LIBC_WASM_ALIGN_CEIL(sizeof(_MBINFO)))
 
 
 /* ***************************************************************************
@@ -55,7 +48,7 @@ static _MBINFO* _mbi_head = NULL;
 */
 
 static inline _MBINFO* _mbi_new(size_t memsize, _MBINFO* prev, _MBINFO* next) {
-    size_t blksize = _WORD_CEIL(memsize);   /* Round up the requested memory size to the next word */
+    size_t blksize = LIBC_WASM_ALIGN_CEIL(memsize); /* Round up the requested memory size to the next word */
     _MBINFO* mbi = NULL;
 
     /* Get enough memory for the header + data */
@@ -64,7 +57,7 @@ static inline _MBINFO* _mbi_new(size_t memsize, _MBINFO* prev, _MBINFO* next) {
     /* Initialize */
     mbi->prev = prev;
     mbi->next = next;
-    mbi->data = ((int8_t*)mbi) + _MBINFO_SIZE;  /* Point to data just beyond the header */
+    mbi->data = ((int8_t*)mbi) + _MBINFO_SIZE;      /* Point to data just beyond the header */
     mbi->size = blksize;
     mbi->free = 1;
 
@@ -76,7 +69,7 @@ static inline _MBINFO* _mbi_new(size_t memsize, _MBINFO* prev, _MBINFO* next) {
 }
 
 static inline void _mbi_split(_MBINFO* mbi, size_t newsize) {
-    size_t blksize = _WORD_CEIL(newsize);   /* Round up the requested memory size to the next word */
+    size_t blksize = LIBC_WASM_ALIGN_CEIL(newsize); /* Round up the requested memory size to the next word */
     ssize_t nextsize = (ssize_t)mbi->size - blksize - _MBINFO_SIZE;
 
     /*
@@ -157,13 +150,13 @@ static void _memory_grow(int npages) {
 
 void* sbrk(size_t incr) {
     int8_t* last = _heap_brk;
-    size_t memsize = (size_t)_memory_size() * _PAGE_SIZE;
+    size_t memsize = (size_t)_memory_size() * LIBC_WASM_PAGE_SIZE;
 
-    _heap_brk += _WORD_CEIL(incr);
+    _heap_brk += LIBC_WASM_ALIGN_CEIL(incr);
 
     /* Grow memory if needed */
     if((size_t)_heap_brk > memsize) {
-        int npages = (((size_t)_heap_brk) - memsize + _PAGE_SIZE - 1) / _PAGE_SIZE;
+        int npages = (((size_t)_heap_brk) - memsize + LIBC_WASM_PAGE_SIZE - 1) / LIBC_WASM_PAGE_SIZE;
 
         _memory_grow(npages);
     }
@@ -185,7 +178,7 @@ void* malloc(size_t size) {
     assert(size > 0);
 
     /* Round up requested memory to the nearest word */
-    size = _WORD_CEIL(size);
+    size = LIBC_WASM_ALIGN_CEIL(size);
 
     /* Initialize the head */
     if(_mbi_head == NULL) {
