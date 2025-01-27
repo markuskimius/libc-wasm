@@ -1,5 +1,6 @@
 ARCHIVE:=libc-wasm.a
 CC:=clang
+CFLAGS:=-mbulk-memory
 CPPFLAGS:=-I. --target=wasm32 -g
 PREFIX:=..
 EPREFIX:=$(PREFIX)

@@ -5,24 +5,11 @@
 #include "stdlib.h"
 
 void* memcpy(void* dest, const void* src, size_t n) {
-    int8_t* dp = dest;
-    const int8_t* sp = src;
-
-    for(size_t i=0; i<n; i++) {
-        *dp++ = *sp++;
-    }
-
-    return dest;
+    return __builtin_memcpy(dest, src, n);
 }
 
 void* memset(void* s, int c, size_t n) {
-    int8_t* cp = s;
-
-    for(size_t i=0; i<n; i++) {
-        *cp++ = c;
-    }
-
-    return s;
+    return __builtin_memset(s, c, n);
 }
 
 void* memchr(const void* s, int c, size_t n) {

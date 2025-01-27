@@ -2,7 +2,7 @@ BINARIES=asm.wasm alloc.wasm alloc2.wasm asprintf.wasm assert.wasm atof.wasm ato
 PREFIX=../..
 CC=clang
 LD=wasm-ld
-CPPFLAGS=-I$(PREFIX)/include --target=wasm32
+CPPFLAGS=-I$(PREFIX)/include --target=wasm32 -g
 LDFLAGS=-L$(PREFIX)/lib
 LDLIBS=-lc-wasm
 

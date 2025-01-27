@@ -124,25 +124,6 @@ static inline _MBINFO* _mbi_of(int8_t* memdata) {
     return (_MBINFO*)(memdata - _MBINFO_SIZE);
 }
 
-__attribute__((optnone))
-static uint32_t _memory_size() {
-    asm(
-        "memory.size 0\n"
-        "return\n"
-    );
-
-    return 0;
-}
-
-__attribute__((optnone))
-static void _memory_grow(int npages) {
-    asm(
-        "local.get 0\n"
-        "memory.grow 0\n"
-        "drop\n"
-    );
-}
-
 
 /* ***************************************************************************
 * PUBLIC FUNCTIONS
@@ -150,7 +131,7 @@ static void _memory_grow(int npages) {
 
 void* sbrk(size_t incr) {
     int8_t* last = _heap_brk;
-    size_t memsize = (size_t)_memory_size() * LIBC_WASM_PAGE_SIZE;
+    size_t memsize = (size_t)__builtin_wasm_memory_size(0) * LIBC_WASM_PAGE_SIZE;
 
     _heap_brk += LIBC_WASM_ALIGN_CEIL(incr);
 
@@ -158,16 +139,17 @@ void* sbrk(size_t incr) {
     if((size_t)_heap_brk > memsize) {
         int npages = (((size_t)_heap_brk) - memsize + LIBC_WASM_PAGE_SIZE - 1) / LIBC_WASM_PAGE_SIZE;
 
-        _memory_grow(npages);
+        __builtin_wasm_memory_grow(0, npages);
     }
 
     return last;
 }
 
 void* calloc(size_t nmemb, size_t size) {
-    void* mem = malloc(nmemb * size);
+    size_t sizeup = LIBC_WASM_ALIGN_CEIL(size);
+    void* mem = malloc(nmemb * sizeup);
 
-    memset(mem, 0, nmemb * size);
+    memset(mem, 0, nmemb * sizeup);
 
     return mem;
 }

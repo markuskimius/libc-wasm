@@ -50,6 +50,36 @@ int main() {
         printf("\n");
     }
 
+    {
+        unsigned char target[1234];
+        unsigned char source[1234];
+        int i = 0;
+
+        printf("memset ... ");
+        memset(source, 0xc5, sizeof(source));
+
+        for(i=0; i<sizeof(source); i++) {
+            if(source[i] != 0xc5) {
+                printf("[ERR]\n");
+                break;
+            }
+        }
+
+        if(i == sizeof(source)) printf("[OK]\n");
+
+        printf("memcpy ... ");
+        memcpy(target, source, sizeof(target));
+
+        for(i=0; i<sizeof(source); i++) {
+            if(target[i] != source[i]) {
+                printf("[ERR]\n");
+                break;
+            }
+        }
+
+        if(i == sizeof(source)) printf("[OK]\n");
+    }
+
     return 0;
 }
 

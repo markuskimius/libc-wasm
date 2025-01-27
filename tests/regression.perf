@@ -1,0 +1,18 @@
+alloc      .. Pass
+asprintf   .. Pass
+assert     .. Pass
+atof       .. Ok
+atoi       .. Pass
+ctype      .. Pass
+exit       .. Pass
+isprint    .. Pass
+main       .. Pass
+math       .. Pass
+pow        .. Ok
+printf     .. Ok
+sizeof     .. Ok
+string     .. Pass
+
+real	0m0.768s
+user	0m0.532s
+sys	0m0.322s
