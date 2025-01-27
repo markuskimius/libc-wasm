@@ -10,6 +10,7 @@ extern "C" {
 
 
 int isatty(int fd);
+__attribute__((export_name("sbrk"))) void* sbrk(size_t incr);
 __attribute__((import_module("env"), import_name("read"))) extern ssize_t read(int fd, void* buf, size_t count);
 __attribute__((import_module("env"), import_name("write"))) extern ssize_t write(int fd, const void* buf, size_t count);
 

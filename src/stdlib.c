@@ -6,6 +6,7 @@
 #include "limits.h"
 #include "math.h"
 #include "string.h"
+#include "unistd.h"
 
 
 /* ***************************************************************************
@@ -34,11 +35,6 @@ typedef struct _MBINFO {
 /* ***************************************************************************
 * GLOBALS
 */
-
-extern int8_t __heap_base;
-
-static int8_t* _heap_base = &__heap_base;
-static int8_t* _heap_brk  = &__heap_base;
 
 static _MBINFO* _mbi_head = NULL;
 
@@ -128,22 +124,6 @@ static inline _MBINFO* _mbi_of(int8_t* memdata) {
 /* ***************************************************************************
 * PUBLIC FUNCTIONS
 */
-
-void* sbrk(size_t incr) {
-    int8_t* last = _heap_brk;
-    size_t memsize = (size_t)__builtin_wasm_memory_size(0) * LIBC_WASM_PAGE_SIZE;
-
-    _heap_brk += LIBC_WASM_ALIGN_CEIL(incr);
-
-    /* Grow memory if needed */
-    if((size_t)_heap_brk > memsize) {
-        int npages = (((size_t)_heap_brk) - memsize + LIBC_WASM_PAGE_SIZE - 1) / LIBC_WASM_PAGE_SIZE;
-
-        __builtin_wasm_memory_grow(0, npages);
-    }
-
-    return last;
-}
 
 void* calloc(size_t nmemb, size_t size) {
     size_t sizeup = LIBC_WASM_ALIGN_CEIL(size);

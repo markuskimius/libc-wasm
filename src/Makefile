@@ -57,7 +57,7 @@ math.o: math.c math.h stdio.h inttypes.h
 
 stdio.o: stdio.c stdio.h errno.h inttypes.h math.h stdlib.h string.h unistd.h
 
-stdlib.o: stdlib.c stdlib.h assert.h ctype.h errno.h inttypes.h limits.h math.h string.h
+stdlib.o: stdlib.c stdlib.h assert.h ctype.h errno.h inttypes.h limits.h math.h string.h unistd.h
 
 string.o: string.c string.h ctype.h errno.h inttypes.h stdlib.h
 
