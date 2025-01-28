@@ -1,6 +1,6 @@
-#include "stdio.h"
 #include "limits.h"
-#include "inttypes.h"
+#include "stdint.h"
+#include "stdio.h"
 
 int main() {
     printf("sizeof(char)      : %zd\n", sizeof(char));

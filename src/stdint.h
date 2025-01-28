@@ -1,5 +1,5 @@
-#ifndef _INTTYPES_H_
-#define _INTTYPES_H_
+#ifndef _STDINT_H_
+#define _STDINT_H_
 
 #include "libc-wasm.h"
 
@@ -24,4 +24,4 @@ typedef __UINTMAX_TYPE__    uintmax_t;
 } /* extern "C" */
 #endif
 
-#endif /* _INTTYPES_H_ */
+#endif /* _STDINT_H_ */

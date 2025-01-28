@@ -53,13 +53,13 @@ ctype.o: ctype.c ctype.h
 
 errno.o: errno.c errno.h
 
-math.o: math.c math.h stdio.h inttypes.h
+math.o: math.c math.h stdio.h stdint.h
 
-stdio.o: stdio.c stdio.h errno.h inttypes.h math.h stdlib.h string.h unistd.h
+stdio.o: stdio.c stdio.h errno.h math.h stdint.h stdlib.h string.h unistd.h
 
-stdlib.o: stdlib.c stdlib.h assert.h ctype.h errno.h inttypes.h limits.h math.h string.h unistd.h
+stdlib.o: stdlib.c stdlib.h assert.h ctype.h errno.h limits.h math.h stdint.h string.h unistd.h
 
-string.o: string.c string.h ctype.h errno.h inttypes.h stdlib.h
+string.o: string.c string.h ctype.h errno.h stdint.h stdlib.h
 
 unistd.o: unistd.c unistd.h
 
@@ -72,9 +72,6 @@ ctype.h: libc-wasm.h
 errno.h: libc-wasm.h
 	touch $@
 
-inttypes.h: libc-wasm.h
-	touch $@
-
 limits.h: libc-wasm.h
 	touch $@
 
@@ -82,6 +79,9 @@ math.h: libc-wasm.h
 	touch $@
 
 stddef.h: libc-wasm.h
+	touch $@
+
+stdint.h: libc-wasm.h
 	touch $@
 
 stdio.h: stddef.h libc-wasm.h

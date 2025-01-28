@@ -1,6 +1,6 @@
 #include "math.h"
+#include "stdint.h"
 #include "stdio.h"
-#include "inttypes.h"
 
 int isnan(double x) {
     int64_t* xp = (int64_t*)&x;

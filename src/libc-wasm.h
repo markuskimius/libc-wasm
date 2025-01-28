@@ -1,7 +1,7 @@
 #ifndef _LIBC_WASM_H_
 #define _LIBC_WASM_H_
 
-#include "inttypes.h"
+#include "stdint.h"
 
 #ifdef __cplusplus
 extern "C" {

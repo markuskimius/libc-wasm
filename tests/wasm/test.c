@@ -1,7 +1,7 @@
+#include "math.h"
+#include "stdint.h"
 #include "stdio.h"
 #include "stdlib.h"
-#include "inttypes.h"
-#include "math.h"
 
 char* sprintb(char* str, double d) {
     uint64_t v = *(uint64_t*)&d;

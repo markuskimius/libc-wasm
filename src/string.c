@@ -1,7 +1,7 @@
 #include "string.h"
 #include "ctype.h"
 #include "errno.h"
-#include "inttypes.h"
+#include "stdint.h"
 #include "stdlib.h"
 
 void* memcpy(void* dest, const void* src, size_t n) {
