@@ -15,6 +15,7 @@ extern "C" {
 #define LIBC_WASM_ALIGN_SIZE    __BIGGEST_ALIGNMENT__
 #define LIBC_WASM_ALIGN_MASK    (LIBC_WASM_ALIGN_SIZE-1)
 #define LIBC_WASM_ALIGN_CEIL(x) (((uintmax_t)(x)+LIBC_WASM_ALIGN_MASK) & ~LIBC_WASM_ALIGN_MASK)
+#define LIBC_WASM_POW2_CEIL(x)  (1 << (sizeof(x)*8 - __builtin_clzg(x-1,(int)sizeof(x)*8)))  /* Ceil to the closest power of 2; if x==0 -> 1 */
 
 #if   defined(__wasm32) || defined(__wasm32__)
     #define LIBC_WASM 32

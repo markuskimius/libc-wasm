@@ -139,8 +139,9 @@ void* malloc(size_t size) {
 
     assert(size > 0);
 
-    /* Round up requested memory to the nearest word */
-    size = LIBC_WASM_ALIGN_CEIL(size);
+    /* Round up requested memory to the next power of 2 */
+    // size = LIBC_WASM_ALIGN_CEIL(size);   /* round up to the nearest word instead */
+    size = LIBC_WASM_POW2_CEIL(size);
 
     /* Initialize the head */
     if(_mbi_head == NULL) {
@@ -188,6 +189,10 @@ void* realloc(void* ptr, size_t size) {
         if(size <= mbi->size) {
             return mbi->data;
         }
+
+        /* Round up requested memory to the next power of 2 */
+        // size = LIBC_WASM_ALIGN_CEIL(size);   /* round up to the nearest word instead */
+        size = LIBC_WASM_POW2_CEIL(size);
 
         /* Ensure next block exists, is contiguous, is free, and big enough */
         if(mbi->next && mbi->next->free && size <= (mbi->size + mbi->next->size) && (mbi->data + mbi->size == (int8_t*)mbj)) {
