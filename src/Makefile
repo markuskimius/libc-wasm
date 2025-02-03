@@ -72,6 +72,9 @@ ctype.h: libc-wasm.h
 errno.h: libc-wasm.h
 	touch $@
 
+inttypes.h: stdint.h
+	touch $@
+
 limits.h: libc-wasm.h
 	touch $@
 
