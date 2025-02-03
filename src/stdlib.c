@@ -44,17 +44,16 @@ static _MBINFO* _mbi_head = NULL;
 */
 
 static inline _MBINFO* _mbi_new(size_t memsize, _MBINFO* prev, _MBINFO* next) {
-    size_t blksize = LIBC_WASM_ALIGN_CEIL(memsize); /* Round up the requested memory size to the next word */
     _MBINFO* mbi = NULL;
 
     /* Get enough memory for the header + data */
-    mbi = sbrk(_MBINFO_SIZE + blksize);
+    mbi = sbrk(memsize);
 
     /* Initialize */
     mbi->prev = prev;
     mbi->next = next;
     mbi->data = ((int8_t*)mbi) + _MBINFO_SIZE;      /* Point to data just beyond the header */
-    mbi->size = blksize;
+    mbi->size = memsize;
     mbi->free = 1;
 
     /* Relink */
@@ -65,16 +64,15 @@ static inline _MBINFO* _mbi_new(size_t memsize, _MBINFO* prev, _MBINFO* next) {
 }
 
 static inline void _mbi_split(_MBINFO* mbi, size_t newsize) {
-    size_t blksize = LIBC_WASM_ALIGN_CEIL(newsize); /* Round up the requested memory size to the next word */
-    ssize_t nextsize = (ssize_t)mbi->size - blksize - _MBINFO_SIZE;
+    ssize_t nextsize = (ssize_t)mbi->size - newsize;
 
     /*
     * Shrink this block and create a new empty next block, but only if there is
     * enough space for the next block.
     */
 
-    if(nextsize > 0) {
-        _MBINFO* mbj = (_MBINFO*)(mbi->data + blksize);
+    if(nextsize > _MBINFO_SIZE) {
+        _MBINFO* mbj = (_MBINFO*)(mbi->data + newsize - _MBINFO_SIZE);
         _MBINFO* mbk = mbi->next;
 
         /* Initialize */
@@ -91,7 +89,7 @@ static inline void _mbi_split(_MBINFO* mbi, size_t newsize) {
         if(mbk) mbk->prev = mbj;
 
         /* Update this block */
-        mbi->size = blksize;
+        mbi->size = newsize;
     }
 }
 
@@ -102,7 +100,7 @@ static inline void _mbi_merge(_MBINFO* mbi) {
     _MBINFO* mbj = mbi->next;
 
     /* Ensure next block exists and it's contiguous */
-    if(mbj && (mbi->data + mbi->size == (int8_t*)mbj)) {
+    if(mbj && (mbi->data + mbi->size == mbj->data)) {
         _MBINFO* mbk = mbj->next;
 
         assert(mbj->free);
@@ -112,7 +110,7 @@ static inline void _mbi_merge(_MBINFO* mbi) {
         if(mbk) mbk->prev = mbi;
 
         /* Change size */
-        mbi->size = mbj->data + mbj->size - mbi->data;
+        mbi->size += mbj->size;
     }
 }
 
@@ -139,9 +137,9 @@ void* malloc(size_t size) {
 
     assert(size > 0);
 
-    /* Round up requested memory to the next power of 2 */
-    // size = LIBC_WASM_ALIGN_CEIL(size);   /* round up to the nearest word instead */
-    size = LIBC_WASM_POW2_CEIL(size);
+    /* Include header size + round up to the next power of 2 */
+    // size = LIBC_WASM_ALIGN_CEIL(_MBINFO_SIZE + size);    /* round up to the nearest word instead */
+    size = LIBC_WASM_POW2_CEIL(_MBINFO_SIZE + size);
 
     /* Initialize the head */
     if(_mbi_head == NULL) {
@@ -184,20 +182,21 @@ void* realloc(void* ptr, size_t size) {
     else {
         _MBINFO* mbi = _mbi_of(ptr);
         _MBINFO* mbj = mbi->next;
+        size_t size2 = 0;
 
         /* Resize only if needed */
         if(size <= mbi->size) {
             return mbi->data;
         }
 
-        /* Round up requested memory to the next power of 2 */
-        // size = LIBC_WASM_ALIGN_CEIL(size);   /* round up to the nearest word instead */
-        size = LIBC_WASM_POW2_CEIL(size);
+        /* Include header size + round up to the next power of 2 */
+        // size2 = LIBC_WASM_ALIGN_CEIL(_MBINFO_SIZE + size);    /* round up to the nearest word instead */
+        size2 = LIBC_WASM_POW2_CEIL(_MBINFO_SIZE + size);
 
         /* Ensure next block exists, is contiguous, is free, and big enough */
-        if(mbi->next && mbi->next->free && size <= (mbi->size + mbi->next->size) && (mbi->data + mbi->size == (int8_t*)mbj)) {
+        if(mbi->next && mbi->next->free && size2 <= (mbi->size + mbi->next->size) && (mbi->data + mbi->size == mbj->data)) {
             _mbi_merge(mbi);
-            _mbi_split(mbi, size);  /* Free up memory we don't need */
+            _mbi_split(mbi, size2); /* Free up memory we don't need */
             return mbi->data;
         }
 
@@ -206,7 +205,7 @@ void* realloc(void* ptr, size_t size) {
             int8_t* newdata = malloc(size);
 
             /* Copy data */
-            memcpy(newdata, mbi->data, mbi->size);
+            memcpy(newdata, mbi->data, mbi->size - _MBINFO_SIZE);
             free(mbi->data);
 
             return newdata;
