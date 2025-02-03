@@ -20,6 +20,16 @@ typedef __UINT64_TYPE__     uint64_t;
 typedef __UINTMAX_TYPE__    uintmax_t;
 
 
+#define INT8_C(x)           x
+#define INT16_C(x)          x
+#define INT32_C(x)          x
+#define INT64_C(x)          x ## LL
+#define UINT8_C(x)          x
+#define UINT16_C(x)         x
+#define UINT32_C(x)         x ## U
+#define UINT64_C(x)         x ## ULL
+
+
 #ifdef __cplusplus
 } /* extern "C" */
 #endif

@@ -41,5 +41,14 @@ int main() {
     printf("ULONG_MAX         : %lu\n", ULONG_MAX);
     printf("ULLONG_MAX        : %llu\n", ULLONG_MAX);
 
+    printf("sizeof(INT8_C)    : %zd\n", sizeof(INT8_C(1)));
+    printf("sizeof(INT16_C)   : %zd\n", sizeof(INT16_C(1)));
+    printf("sizeof(INT32_C)   : %zd\n", sizeof(INT32_C(1)));
+    printf("sizeof(INT64_C)   : %zd\n", sizeof(INT64_C(1)));
+    printf("sizeof(UINT8_C)   : %zd\n", sizeof(UINT8_C(1)));
+    printf("sizeof(UINT16_C)  : %zd\n", sizeof(UINT16_C(1)));
+    printf("sizeof(UINT32_C)  : %zd\n", sizeof(UINT32_C(1)));
+    printf("sizeof(UINT64_C)  : %zd\n", sizeof(UINT64_C(1)));
+
     return 0;
 }
