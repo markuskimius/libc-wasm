@@ -184,14 +184,14 @@ void* realloc(void* ptr, size_t size) {
         _MBINFO* mbj = mbi->next;
         size_t size2 = 0;
 
-        /* Resize only if needed */
-        if(size <= mbi->size) {
-            return mbi->data;
-        }
-
         /* Include header size + round up to the next power of 2 */
         // size2 = LIBC_WASM_ALIGN_CEIL(_MBINFO_SIZE + size);    /* round up to the nearest word instead */
         size2 = LIBC_WASM_POW2_CEIL(_MBINFO_SIZE + size);
+
+        /* Resize only if needed */
+        if(size2 <= mbi->size) {
+            return mbi->data;
+        }
 
         /* Ensure next block exists, is contiguous, is free, and big enough */
         if(mbi->next && mbi->next->free && size2 <= (mbi->size + mbi->next->size) && (mbi->data + mbi->size == mbj->data)) {
