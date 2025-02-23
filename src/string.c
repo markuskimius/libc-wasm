@@ -28,6 +28,10 @@ void* memchr(const void* s, int c, size_t n) {
     return result;
 }
 
+void* memmove(void* dest, const void* src, size_t n) {
+    return __builtin_memmove(dest, src, n);
+}
+
 size_t strlen(const char* s) {
     size_t i = 0;
 

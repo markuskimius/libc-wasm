@@ -67,6 +67,10 @@ int main() {
 
         if(i == sizeof(source)) printf("[OK]\n");
 
+        for(i=0; i<sizeof(source); i++) {
+            source[i] = i & 0xff;
+        }
+
         printf("memcpy ... ");
         memcpy(target, source, sizeof(target));
 
@@ -78,6 +82,18 @@ int main() {
         }
 
         if(i == sizeof(source)) printf("[OK]\n");
+
+        printf("memmove ... ");
+        memmove(target, target+1, sizeof(target)-1);
+
+        for(i=0; i<sizeof(source)-1; i++) {
+            if(target[i] != source[i+1]) {
+                printf("[ERR]\n");
+                break;
+            }
+        }
+
+        if(i == sizeof(source)-1) printf("[OK]\n");
     }
 
     return 0;
