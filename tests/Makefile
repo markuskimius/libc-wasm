@@ -1,4 +1,4 @@
-TARGETS=c wasm wasm-importmem wasm-io
+TARGETS=c wasm
 
 
 .PHONY: all clean install
