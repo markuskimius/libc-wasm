@@ -3,23 +3,19 @@
 #include "stdio.h"
 
 int isnan(double x) {
-    int64_t* xp = (int64_t*)&x;
-    int64_t xe = (*xp >> 52) & 0x7ff;   /* exponent */
-    int64_t xm = *xp & 0xfffffffffffff; /* mantissa */
+    uint64_t u64 = * (uint64_t*) &x;
 
-    return (xe==0x7ff) && (xm!=0);
+    return 0x7ff0000000000001 <= u64 && u64 <= 0x7fffffffffffffff;
 }
 
 int isinf(double x) {
-    int64_t* xp = (int64_t*)&x;
-    int64_t xe = (*xp >> 52) & 0x7ff;   /* exponent */
-    int64_t xm = *xp & 0xfffffffffffff; /* mantissa */
+    uint64_t u64 = * (uint64_t*) &x;
 
-    return (xe==0x7ff) && (xm==0);
+    return 0x7ff0000000000000 == u64 || u64 == 0xfff0000000000000;
 }
 
 double fabs(double x) {
-    int64_t* xp = (int64_t*)&x;
+    int64_t* xp = (int64_t*) &x;
 
     /* Clear the sign bit */
     *xp &= 0x7fffffffffffffff;
