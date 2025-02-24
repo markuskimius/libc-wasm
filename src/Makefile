@@ -21,19 +21,28 @@ clean:
 install: $(ARCHIVE)
 	install -m 755 -d $(LIBDIR)
 	install -m 755 -d $(INCDIR)
+	install -m 755 -d $(INCDIR)/sys
 	install -m 644 $(ARCHIVE) $(LIBDIR)
-	@for i in *.h; do                              \
-		echo install -m 644 $$i $(INCDIR); \
-		install -m 644 $$i $(INCDIR);      \
+	@for i in *.h; do                          \
+		echo install -m 644 $$i $(INCDIR);     \
+		install -m 644 $$i $(INCDIR);          \
+	done
+	@for i in sys/*.h; do                      \
+		echo install -m 644 $$i $(INCDIR)/sys; \
+		install -m 644 $$i $(INCDIR)/sys;      \
 	done
 
 uninstall:
 	$(RM) $(LIBDIR)/$(ARCHIVE)
-	@for i in *.h; do                         \
-		echo $(RM) $(INCDIR)/$$i;     \
-		$(RM) $(INCDIR)/$$i;          \
+	@for i in sys/*.h; do         \
+		echo $(RM) $(INCDIR)/$$i; \
+		$(RM) $(INCDIR)/$$i;      \
 	done
-	rmdir -p $(INCDIR) 2>/dev/null || true
+	@for i in *.h; do             \
+		echo $(RM) $(INCDIR)/$$i; \
+		$(RM) $(INCDIR)/$$i;      \
+	done
+	rmdir -p $(INCDIR)/sys 2>/dev/null || true
 	rmdir -p $(LIBDIR) 2>/dev/null || true
 
 

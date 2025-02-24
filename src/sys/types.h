@@ -1,5 +1,5 @@
-#ifndef _STDDEF_H_
-#define _STDDEF_H_
+#ifndef _SYS_TYPES_H_
+#define _SYS_TYPES_H_
 
 #include "libc-wasm.h"
 
@@ -8,11 +8,11 @@ extern "C" {
 #endif
 
 
-typedef unsigned long       size_t;
+typedef long                ssize_t;
 
 
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
 
-#endif /* _STDDEF_H_ */
+#endif /* _SYS_TYPES_H_ */
