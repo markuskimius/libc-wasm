@@ -17,7 +17,53 @@ int main() {
         }
     }
 
-    printf("pow(%lf,%lf) -> %lf\n", 3.0, 0.25, pow(3.0, 0.25));
+    printf("pow(%lf,%lf) -> %lf\n", 3.0, 0.25 , pow(3.0, 0.25));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, 6.103, pow(7.0, 6.103));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, 4.125, pow(7.0, 4.125));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, 3.25 , pow(7.0, 3.25));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, 1.5  , pow(7.0, 1.5));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, 0.0  , pow(7.0, 0.0));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, 0.5  , pow(7.0, 0.5));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, 0.375, pow(7.0, 0.375));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, 0.25 , pow(7.0, 0.25));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, 0.125, pow(7.0, 0.125));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, 0.103, pow(7.0, 0.103));
+
+    printf("pow(%lf,%lf) -> %lf\n", -3.0, 0.25 , pow(-3.0, 0.25));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, 6.103, pow(-7.0, 6.103));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, 4.125, pow(-7.0, 4.125));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, 3.25 , pow(-7.0, 3.25));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, 1.5  , pow(-7.0, 1.5));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, 0.0  , pow(-7.0, 0.0));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, 0.5  , pow(-7.0, 0.5));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, 0.375, pow(-7.0, 0.375));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, 0.25 , pow(-7.0, 0.25));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, 0.125, pow(-7.0, 0.125));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, 0.103, pow(-7.0, 0.103));
+
+    printf("pow(%lf,%lf) -> %lf\n", 3.0, -0.25 , pow(3.0, -0.25));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, -6.103, pow(7.0, -6.103));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, -4.125, pow(7.0, -4.125));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, -3.25 , pow(7.0, -3.25));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, -1.5  , pow(7.0, -1.5));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, -0.0  , pow(7.0, -0.0));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, -0.5  , pow(7.0, -0.5));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, -0.375, pow(7.0, -0.375));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, -0.25 , pow(7.0, -0.25));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, -0.125, pow(7.0, -0.125));
+    printf("pow(%lf,%lf) -> %lf\n", 7.0, -0.103, pow(7.0, -0.103));
+
+    printf("pow(%lf,%lf) -> %lf\n", -3.0, -0.25 , pow(-3.0, -0.25));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, -6.103, pow(-7.0, -6.103));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, -4.125, pow(-7.0, -4.125));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, -3.25 , pow(-7.0, -3.25));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, -1.5  , pow(-7.0, -1.5));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, -0.0  , pow(-7.0, -0.0));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, -0.5  , pow(-7.0, -0.5));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, -0.375, pow(-7.0, -0.375));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, -0.25 , pow(-7.0, -0.25));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, -0.125, pow(-7.0, -0.125));
+    printf("pow(%lf,%lf) -> %lf\n", -7.0, -0.103, pow(-7.0, -0.103));
 
     return 0;
 }
