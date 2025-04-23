@@ -10,6 +10,9 @@ extern "C" {
 #endif
 
 
+#ifdef NDEBUG
+#define assert(expr) do {} while(0)
+#else
 #define assert(expr) do {                                               \
     if(!(expr)) {                                                       \
         fprintf(stderr,                                                 \
@@ -20,6 +23,7 @@ extern "C" {
         _exit(134);                                                     \
     }                                                                   \
 } while(0)
+#endif
 
 
 #ifdef __cplusplus
